@@ -5,7 +5,7 @@ import {Box, Button, Container, Flex, Text} from '@chakra-ui/react';
 import {Link} from 'react-router-dom';
 import {RxCrossCircled} from 'react-icons/rx';
 import {PiShoppingBagLight} from 'react-icons/pi';
-import wishImage from '../Images/empty-wishlist.png';
+import wishImage from '../Images/EMPTY-WISHLIST-PAGE.jpg';
 
 export default function Wishlist() {
      
@@ -92,7 +92,7 @@ export default function Wishlist() {
     </>
         ):(
         <>
-        <h1 style={{marginLeft: "50px"}}>Wishlist</h1>
+        <h1 style={{marginLeft: "50px", marginTop:"150px"}}>Wishlist</h1>
        <Container style={{display: "flex", flexWrap:"wrap"}}>    
        {wishlist?.data?.items && wishlist.data.items.length>0 ?(
        wishlist?.data?.items?.map((item, index) => (
@@ -114,14 +114,13 @@ export default function Wishlist() {
         </Box>
         ))
        ):(
-        <Flex style={{justifyContent:"center", alignItems:"center", flexDirection:"column", marginLeft:"27%"}}>
-            <img src={wishImage} alt="wishlist" style={{ width:"35%"}} />
-            <Text style={{marginTop:"0",fontWeight:"bold"}}>Hey! Your wishlist is empty.</Text>
-            <Text style={{marginTop:"0", width:"24rem", color:"#8f98a9"}}>
+        <Flex style={{justifyContent:"center", alignItems:"center", flexDirection:"column", marginLeft:"27%",marginTop:"50px"}}>
+            <img src={wishImage} alt="wishlist" style={{ width:"50%", marginLeft:"-150px", marginTop:"-140px"}} />
+            <Text style={{marginTop:"0", width:"24rem", color:"#8f98a9", marginLeft:"-120px"}}>
             Save Your favourites here and make them your soon!</Text>
             <Link to='/'>
             <Button 
-            style={{ width:"13rem", height:"2.5rem", fontWeight:"bold",fontSize:"18px",
+            style={{ width:"13rem", height:"2.5rem", fontWeight:"bold",fontSize:"18px", marginLeft:"-120px",
             color:"white", backgroundColor:"#f8eb27", borderRadius:"5px", border:"1px solid rgb(66, 162, 162)", cursor:"pointer"}}>
             SHOP NOW</Button>
             </Link>

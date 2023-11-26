@@ -474,45 +474,46 @@ margin-left: 70px;
 }
 
 .login{
-margin-left: 850px;
-margin-top: -470px;
+margin-left: 820px;
+margin-top: -490px;
 font-size: 24px;
 letter-spacing: .5px;
-margin-bottom: 22px;
+
 }
 .tag{
   color: #a0a0a0;
-  margin: 0 0 70px;
   font-size: 18px;
-  margin-left: 700px;
+  margin-left: 750px;
   font-weight: 500;
 }
 .enterEmail{
-  margin-left: 750px;
-  height: 40px;
+  margin-left: 700px;
+  height: 10px;
   border: 1px solid #ced4da;
   padding: 1rem;
   font-size: 20px;
-  width: 30%;
+  width: 25%;
   border-radius: 5px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 .LogButton{
-  margin-left: 750px;
-  height: 70px;
+  margin-left: 700px;
+  height: 10px;
   border: 1px solid #42a2a2;
   background-color: #42a2a2;
   color: white;
+  
+  text-align: center;
   padding: 1rem;
-  font-size: 20px;
-  width: 33%;
+  font-size: 15px;
+  width: 27.5%;
   border-radius: 5px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .registerButton{
 text-align: right;
-margin-right: 17%;
+margin-right: 35%;
 color: #a0a0a0;
 margin-bottom: 20px;
 }
@@ -854,3 +855,8 @@ border: 1px solid #42a2a2;
   color: grey;
 }
 
+
+.listItem:hover{
+  color: #fceb03;
+  font-weight: 700;
+}

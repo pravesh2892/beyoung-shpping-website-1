@@ -10,6 +10,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { NavLink, useNavigate } from "react-router-dom";
 import { BsHeart, BsBag } from "react-icons/bs";
 import { CiUser } from "react-icons/ci";
@@ -455,7 +456,7 @@ export default function Nav() {
                     </NavLink>
                     <NavLink to="/Cart" style={{ color: "black" }}>
                       <ListItem>
-                        <BsBag
+                        <ShoppingCartOutlinedIcon
                           style={{ marginTop: "11px", fontSize: "20px" }}
                         />
                         {cartItem.results > 0 && (
@@ -481,7 +482,7 @@ export default function Nav() {
                     </NavLink>
                     <NavLink to="/Login" style={{ color: "black" }}>
                       <ListItem>
-                        <BsBag
+                        <ShoppingCartOutlinedIcon
                           style={{ marginTop: "11px", fontSize: "20px" }}
                         />
                       </ListItem>

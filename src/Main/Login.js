@@ -3,7 +3,7 @@ import { Container, Spacer, Text } from '@chakra-ui/react'
 import { useState, useEffect} from 'react';
 import {NavLink, useNavigate} from 'react-router-dom';
 import { LOGIN_FAILURE, login } from '../Action';
-import loginPage from '../Images/loginPage.png'
+import loginPage from '../Images/login-and-signup-image.jpg'
 import { useDispatch, useSelector } from 'react-redux';
 
 
@@ -48,13 +48,13 @@ const handlelogin = (e) => {
   }, [isLoggedIn, navigator]);
    
   return (
-    <div style={{marginTop:"6rem"}}>
-    <img src={loginPage} alt="Welcome" style={{width:"50%"}} />
-    <Container>
+    <div style={{marginTop:"6rem", position:"relative"}}>
+    <img src={loginPage} alt="Welcome" style={{width:"30%", marginLeft:"500px"}} />
+    <Container style={{marginTop:"500px", marginLeft:"-200px"}}>
     <h1 className='login'>Log in / Sign up</h1>
-    <h5 className='tag'>for latest trends, exciting offers and everything Bewakoof® !</h5>
+    <h5 className='tag'>Get Exciting Offers & Track Order</h5>
     
-    <Text className="error" style={{color: color, marginLeft:"850px"}}>
+    <Text className="error" style={{color: color, marginLeft:"700px"}}>
     {message} </Text>
 
     <input placeholder='Enter Email ID' type='text' className='enterEmail' value={email} 
@@ -62,7 +62,7 @@ const handlelogin = (e) => {
 
     <input placeholder='Enter Password' type='password' className='enterEmail' value={password} 
     onChange={(event)=>setPassword(event.target.value)}/>
-    <Spacer/>
+   
     <button className='LogButton' onClick={handlelogin}>CONTINUE</button>
      
     

@@ -1,5 +1,5 @@
 import React from "react";
-import notfound from "../Images/notfound.gif";
+import notfound from "../Images/not.gif";
 import { Button, Flex } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
@@ -13,10 +13,7 @@ export default function NotAvailable() {
           flexDirection: "column",
         }}
       >
-        <img
-          style={{ maxWidth: "30%", height: "auto", marginTop: "40px" }}
-          src="https://www.optimalvirtualemployee.com/wp-content/uploads/2023/01/front-end-development.gif"
-        />
+         <img src={notfound} style={{width:"40%"}}  />
         <h3>We are working on something amazing.</h3>
         <h4 style={{ marginTop: "-15px" }}>Till then stay tuned</h4>
         <Link to="/">

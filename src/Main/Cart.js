@@ -5,7 +5,7 @@
   import {FaTruck} from 'react-icons/fa';
   import { ChevronDownIcon } from "@chakra-ui/icons";
   import info from '../Images/info.png';
-  import emptybag from '../Images/emptybag.png';
+  import emptybag from '../Images/EMPTY-beyoung..png';
   import { placeOrder } from '../ServiceApi';
   import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, FormControl, FormLabel, 
   Input, ModalBody, useDisclosure, MenuButton, Menu, MenuList, MenuItem } from "@chakra-ui/react";
@@ -175,7 +175,7 @@ import Footer from './Footer';
             </div>
           ) : (
             <Flex style={{flexDirection:"column", justifyContent:"center",alignItems:"center"}}>
-              <img src={emptybag} alt="cartbag" style={{ width: '150px'}} />
+              <img src={emptybag} alt="cartbag" style={{ width: '350px'}} />
               <Text style={{marginTop: '0', fontSize: '25px' }}>Nothing in the bag.</Text>
               <Link to='/'>
                 <Button

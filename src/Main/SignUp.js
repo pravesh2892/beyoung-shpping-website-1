@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Spacer, Text } from '@chakra-ui/react';
-import loginPage from '../Images/loginPage.png'
+import loginPage from '../Images/login-and-signup-image.jpg'
 import {useDispatch, useSelector} from 'react-redux';
 import { LOGIN_FAILURE,  signup} from '../Action';
 import {useNavigate} from 'react-router-dom';
@@ -48,11 +48,11 @@ import {useNavigate} from 'react-router-dom';
     
   
   return (
-    <div style={{marginTop:"6rem"}}>
-    <img src={loginPage} alt="Welcome" style={{width:"50%"}} />
-    <Container>
+    <div style={{marginTop:"6rem", position:"relative"}}>
+    <img src={loginPage} alt="Welcome" style={{width:"30%", marginLeft:"500px"}} />
+    <Container style={{marginTop:"500px", marginLeft:"-200px"}}>
     <h1 className='login'>Sign Up</h1>
-    <h5 className='tag'>for latest trends, exciting offers and everything Bewakoof® !</h5>
+    <h5 className='tag'>Get Exciting Offers & Track Order !</h5>
     
     <Text className="error" style={{color: color, marginLeft:"850px"}}>
     {message} </Text>
