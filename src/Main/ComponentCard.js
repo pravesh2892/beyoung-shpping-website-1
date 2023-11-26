@@ -118,9 +118,9 @@ const ComponentCard = ({ data }) => {
     ):(
     <>
       {data?.map((item, index) => (
-        <Box className='dataStyle' key={index} style={{ position: 'relative' }}>
+        <Box className='dataStyle' key={index} style={{ position: 'relative', borderRadius:"5px" }}>
         <Link to={`/product/${item._id}`}>
-         <img className='dataImage' src={item.displayImage ? item.displayImage : noAvailable} alt="image"/>
+         <img className='dataImage' src={item.displayImage ? item.displayImage : noAvailable} alt="image" />
         </Link>
         
          
@@ -142,8 +142,8 @@ const ComponentCard = ({ data }) => {
             </>
           )}
         
-        <div className='dataTitle' style={{ color: "rgb(115, 115, 115)" }}>{item.name}</div>
-        <div className='dataPrice' style={{ fontSize: "20px" }}>₹{item.price}</div>
+        <div className='dataTitle' style={{ color: "rgba(0,0,0,0.7)", fontWeight:"600", fontSize:"14px" }}>{item.name}</div>
+        <div className='dataPrice' style={{ fontSize: "20px" }}>₹{item.price}/-</div>
      </Box>
     )
     )}

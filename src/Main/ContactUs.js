@@ -16,10 +16,11 @@ export default function ContactUs() {
   return (
     <div style={{marginTop:"6rem", marginLeft:"40px"}}>
         <Box style={{backgroundColor:"#fafafa", height:"350px", marginRight:"30px"}}>
-        <h5 style={{fontSize:"25px", paddingLeft:"30px", paddingTop:"30px"}}>
-        Contact Us</h5>
-        <hr className='ruler' style={{marginTop:"-40px", marginRight:"88%", marginLeft:"30px"}}/>   
+        <h5 style={{fontSize:"40px", paddingLeft:"50px", paddingTop:"30px", color:"#ededed"}}>
+        Help Center</h5>
+        {/* <hr className='ruler' style={{marginTop:"-40px", marginRight:"88%", marginLeft:"30px"}}/>    */}
         <Text style={{fontSize:"30px", paddingLeft:"50px"}}>What's your query about ?</Text>
+        <Text style={{color:"#51cccc", fontSize:"16px", paddingLeft:"50px"}}>Hello there, nice to see you !</Text>
         <Flex style={{justifyContent:"space-between"}}>
         <Flex style={{flexDirection:"column"}}>
         <input placeholder='Search your Query here' type='text' className='Inputicon' value={search} 
@@ -30,7 +31,7 @@ export default function ContactUs() {
           </Text>
         )}
         </Flex>
-        <img src='https://www.beyoung.in/desktop/images/contact-us/new/desktop-contact_us-BB_image.png' style={{marginTop:"-130px", width:"350px", paddingRight:"150px"}}/>
+        <img src='https://www.beyoung.in/desktop/images/contact-us/new/desktop-contact_us-BB_image.png' style={{marginTop:"-210px", width:"350px", paddingRight:"150px"}}/>
         </Flex>
         </Box>  
         <Box style={{backgroundColor:"#fafafa", height:"350px", marginRight:"30px"}}>

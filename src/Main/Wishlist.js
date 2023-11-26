@@ -5,7 +5,7 @@ import {Box, Button, Container, Flex, Text} from '@chakra-ui/react';
 import {Link} from 'react-router-dom';
 import {RxCrossCircled} from 'react-icons/rx';
 import {PiShoppingBagLight} from 'react-icons/pi';
-import wishImage from '../Images/wishImage.png';
+import wishImage from '../Images/empty-wishlist.png';
 
 export default function Wishlist() {
      
@@ -80,7 +80,7 @@ export default function Wishlist() {
     Save Your favorites here and make them your soon!
     </Text>
     <Link to='/' style={{ margin: '0 auto' }}>
-    <Button style={{width: '13rem', height: '2.5rem', fontWeight: 'bold', fontSize: '18px', color: 'white', backgroundColor: 'rgb(66, 162, 162)',
+    <Button style={{width: '13rem', height: '2.5rem', fontWeight: 'bold', fontSize: '18px', color: 'white', backgroundColor: '#f8eb27',
     borderRadius: '5px', border: '1px solid rgb(66, 162, 162)', cursor: 'pointer'}} >
       SHOP NOW
     </Button>
@@ -114,7 +114,7 @@ export default function Wishlist() {
         </Box>
         ))
        ):(
-        <Flex style={{justifyContent:"center", alignItems:"center", flexDirection:"column", marginLeft:"37%"}}>
+        <Flex style={{justifyContent:"center", alignItems:"center", flexDirection:"column", marginLeft:"27%"}}>
             <img src={wishImage} alt="wishlist" style={{ width:"35%"}} />
             <Text style={{marginTop:"0",fontWeight:"bold"}}>Hey! Your wishlist is empty.</Text>
             <Text style={{marginTop:"0", width:"24rem", color:"#8f98a9"}}>
@@ -122,7 +122,7 @@ export default function Wishlist() {
             <Link to='/'>
             <Button 
             style={{ width:"13rem", height:"2.5rem", fontWeight:"bold",fontSize:"18px",
-            color:"white", backgroundColor:"rgb(66, 162, 162)", borderRadius:"5px", border:"1px solid rgb(66, 162, 162)", cursor:"pointer"}}>
+            color:"white", backgroundColor:"#f8eb27", borderRadius:"5px", border:"1px solid rgb(66, 162, 162)", cursor:"pointer"}}>
             SHOP NOW</Button>
             </Link>
         </Flex>

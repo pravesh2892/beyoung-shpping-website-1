@@ -279,6 +279,7 @@ font-size: 20px;
   padding: 0;
   box-sizing: border-box;
   margin-bottom: 10%;
+ 
 }
 
 .dataImage{
@@ -519,6 +520,7 @@ margin-bottom: 20px;
   position: absolute;
   margin-top: 13px;
   margin-left: -10px;
+  margin-right: 40px;
   width: 200px;
   z-index: 100;
   background-color: white;

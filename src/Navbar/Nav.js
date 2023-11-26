@@ -9,6 +9,7 @@ import {
   List,
   Button,
 } from "@chakra-ui/react";
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import { NavLink, useNavigate } from "react-router-dom";
 import { BsHeart, BsBag } from "react-icons/bs";
 import { CiUser } from "react-icons/ci";
@@ -161,9 +162,12 @@ export default function Nav() {
               <UnorderedList className="topBar-left">
               <NavLink
                   to="Orders"
-                  style={{ textDecoration: "none", color: "white" }}
+                  style={{ textDecoration: "none", color: "white", }}
                 >
-                  <ListItem>Track Order</ListItem>
+                <Flex>
+                  <LocationOnOutlinedIcon style={{ marginTop: '-7px' }}/>
+                  <ListItem style={{marginLeft:"5px", lineHeight:"12px"}}>TRACK YOUR ORDER</ListItem>
+                  </Flex>
                 </NavLink>
                 
   
@@ -171,18 +175,104 @@ export default function Nav() {
             </Flex>
             <Flex>
               <UnorderedList className="topBar-right">
-                <NavLink
-                  to="ContactUs"
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  <ListItem>Contact Us</ListItem>
-                </NavLink>
+              {isLoggedIn ? (
+                  <div>
+                    <CiUser
+                      onClick={handleProfileClick}
+                      style={{
+                        fontSize: "25px",
+                        color:"white",
+                        marginRight: "75px",
+                        borderRight: "2px solid white",
+                        paddingRight: "10px",
+                        marginTop:"-6px",
+                        strokeWidth: "1"
+                      }}
+                    />
+                    {dropmenu && (
+                      <ul className="profileOption">
+                        <li
+                          style={{
+                            backgroundColor: "#eee",
+                            color: "black",
+                          }}
+                        >
+                          Hello, {userInfo?.signup?.data?.name}
+                        </li>
+                        <NavLink
+                          to="/Account"
+                          style={{
+                            textDecoration: "none",
+                            cursor: "pointer",
+                            color: "black",
+                          }}
+                        >
+                          <li>My Account</li>
+                        </NavLink>
+                        <NavLink
+                          to="/Wishlist"
+                          style={{
+                            textDecoration: "none",
+                            cursor: "pointer",
+                            color: "black",
+                          }}
+                        >
+                          <li>My Wishlist</li>
+                        </NavLink>
+                        <NavLink
+                          to="/Orders"
+                          style={{
+                            textDecoration: "none",
+                            cursor: "pointer",
+                            color: "black",
+                          }}
+                        >
+                          <li>My Orders</li>
+                        </NavLink>
+                        <NavLink
+                          to="/Wallet"
+                          style={{
+                            textDecoration: "none",
+                            cursor: "pointer",
+                            color: "black",
+                          }}
+                        >
+                          <li>My Wallet</li>
+                        </NavLink>
+                        <li onClick={handleLogout}>Logout</li>
+                      </ul>
+                    )}
+                  </div>
+                ) : (
+                  <>
+                    <NavLink
+                      to="/Login"
+                      style={{ color: "white", textDecoration: "none" }}
+                    >
+                      <ListItem
+                        style={{
+                          marginRight:"55px",
+                          color:"white",
+                          fontSize:"12px",
+                          fontWeight:"500",
+                          cursor: "pointer",
+                          borderRight: "1px solid white",
+                          paddingRight: "10px",
+                        }}
+                      >
+                        LOGIN
+                      </ListItem>
+                    </NavLink>
+                  </>
+                )}
                
+          
+        
               </UnorderedList>
             </Flex>
           </Flex>
 
-          <Flex className="navBar" style={{ justifyContent: "space-between" }}>
+          <Flex className="navBar" style={{ justifyContent: "space-between", marginLeft:"35px", marginRight:"45px" }}>
             <Flex
               style={{
                 overflow: "hidden",
@@ -293,7 +383,7 @@ export default function Nav() {
                   />
                   <input
                     type="search"
-                    placeholder="Search by product, category or collection"
+                    placeholder="Search by product"
                     className="inputSearch"
                     onChange={handleSearchInputChange}
                     ref={searchInputRef}
@@ -349,91 +439,7 @@ export default function Nav() {
                       </Box>
                     )}
                 </Box>
-                {isLoggedIn ? (
-                  <div>
-                    <CiUser
-                      onClick={handleProfileClick}
-                      style={{
-                        fontSize: "25px",
-                        marginRight: "15px",
-                        borderLeft: "1px solid rgba(0, 0, 0, 0.2)",
-                        paddingLeft: "10px",
-                      }}
-                    />
-                    {dropmenu && (
-                      <ul className="profileOption">
-                        <li
-                          style={{
-                            backgroundColor: "#eee",
-                            color: "rgba(0, 0, 0, 0.5)",
-                          }}
-                        >
-                          Hi, {userInfo?.signup?.data?.name}
-                        </li>
-                        <NavLink
-                          to="/Account"
-                          style={{
-                            textDecoration: "none",
-                            cursor: "pointer",
-                            color: "black",
-                          }}
-                        >
-                          <li>My Account</li>
-                        </NavLink>
-                        <NavLink
-                          to="/Wishlist"
-                          style={{
-                            textDecoration: "none",
-                            cursor: "pointer",
-                            color: "black",
-                          }}
-                        >
-                          <li>My Wishlist</li>
-                        </NavLink>
-                        <NavLink
-                          to="/Orders"
-                          style={{
-                            textDecoration: "none",
-                            cursor: "pointer",
-                            color: "black",
-                          }}
-                        >
-                          <li>My Orders</li>
-                        </NavLink>
-                        <NavLink
-                          to="/Wallet"
-                          style={{
-                            textDecoration: "none",
-                            cursor: "pointer",
-                            color: "black",
-                          }}
-                        >
-                          <li>My Wallet</li>
-                        </NavLink>
-                        <li onClick={handleLogout}>Logout</li>
-                      </ul>
-                    )}
-                  </div>
-                ) : (
-                  <>
-                    <NavLink
-                      to="/Login"
-                      style={{ color: "black", textDecoration: "none" }}
-                    >
-                      <ListItem
-                        style={{
-                          marginTop: "5px",
-                          cursor: "pointer",
-                          borderLeft: "1px solid rgba(0, 0, 0, 0.2)",
-                          paddingLeft: "10px",
-                        }}
-                      >
-                        Login
-                      </ListItem>
-                    </NavLink>
-                  </>
-                )}
-
+              
                 {isLoggedIn ? (
                   <>
                     <NavLink to="/Wishlist" style={{ color: "black" }}>
