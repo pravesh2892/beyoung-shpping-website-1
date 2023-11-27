@@ -1,5 +1,5 @@
 import React from "react";
-import notfound from "../Images/not.gif";
+import notfound from "../Assets/not.gif";
 import { Button, Flex } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
