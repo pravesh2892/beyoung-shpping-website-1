@@ -1,29 +1,29 @@
 
 import './App.css';
 import Nav from './Navbar/Nav';
-import Home from './Main/Home';
+import Home from './Components/Home';
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import Categories from './Main/Categories';
-import ProductDetail from './Main/ProductDetail';
-import Login from './Main/Login';
-import SignUp from './Main/SignUp';
-import Wishlist from './Main/Wishlist';
-import Cart from './Main/Cart';
-import Product from './Main/Product';
-import BrandCategories from './Main/BrandCategories';
-import Account  from './Main/Account';
-import Orders from './Main/Orders';
-import Wallet from './Main/Wallet';
-import Address from './Main/Address';
-import Profile from './Main/Profile';
-import ResCategories from './Main/ResCategories';
-import NotAvailable from './Main/NotAvailable';
-import Tribe from './Main/Tribe';
-import Payment from './Main/Payment';
-import OrderInfo from './Main/OrderInfo';
-import SearchResult from './Main/SearchResult';
-import ContactUs from './Main/ContactUs';
-import PlaceOrder from './Main/PlaceOrder';
+import Categories from './Components/Categories';
+import ProductDetail from './Components/ProductDetail';
+import Login from './Components/Login';
+import SignUp from './Components/SignUp';
+import Wishlist from './Components/Wishlist';
+import Cart from './Components/Cart';
+import Product from './Components/Product';
+import BrandCategories from './Components/BrandCategories';
+import Account  from './Components/Account';
+import Orders from './Components/Orders';
+import Wallet from './Components/Wallet';
+import Address from './Components/Address';
+import Profile from './Components/Profile';
+import ResCategories from './Components/ResCategories';
+import NotAvailable from './Components/NotAvailable';
+import Tribe from './Components/Tribe';
+import Payment from './Components/Payment';
+import OrderInfo from './Components/OrderInfo';
+import SearchResult from './Components/SearchResult';
+import ContactUs from './Components/ContactUs';
+import PlaceOrder from './Components/PlaceOrder';
 
 function App() {
   return (

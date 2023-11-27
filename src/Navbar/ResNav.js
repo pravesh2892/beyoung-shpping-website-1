@@ -8,7 +8,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import React from 'react';  
 import bewakoofLogo from '../Assets/bewakoofLogo.png';
 import flag from'../Assets/flag.png';
-import Footer from '../Main/Footer';
+import Footer from '../Components/Footer';
 import {GrUserManager, GrUserFemale} from 'react-icons/gr';
 import {GiStarFormation} from 'react-icons/gi';
 import {LiaShoePrintsSolid} from 'react-icons/lia';

@@ -135,11 +135,11 @@ const ComponentCard = ({ data }) => {
           )}
           </div>
           ):(
-            <>
+            <div style={{ position: 'absolute', top: '5px', right: '9px',height: "25px", width: "25px", borderRadius:"50%" ,background:"#fff" }}>
             <Link to ='/Login'>
             <BsHeart style={{ height: "20px", width: "20px", color:"grey" , marginLeft: "8%" ,marginTop:"5px", cursor:"pointer", lineHeight:"44px" }}/>
             </Link>
-            </>
+            </div>
           )}
         
         <div className='dataTitle' style={{ color: "rgba(0,0,0,0.7)", fontWeight:"600", fontSize:"14px" }}>{item.name}</div>
