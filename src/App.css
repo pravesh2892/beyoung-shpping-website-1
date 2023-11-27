@@ -2,7 +2,9 @@
 .App {
   text-align: center;
 }
-
+body {
+  overflow-x: hidden;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -159,11 +161,12 @@ margin-bottom: 10px;
 }
 
 .largerCarousel {
-  padding-left: 5px;
+ 
+  padding-left: 30px;
   padding-top: 10px;
 }
 .largerCarousel .large-slider-img {
-  width: 410px;
+  width: 400px;
 }
 
 .image1{
@@ -860,3 +863,107 @@ border: 1px solid #42a2a2;
   color: #fceb03;
   font-weight: 700;
 }
+
+/* Slider styles */
+.swiper-slider {
+  position: relative;
+  width: 100%;
+  margin: 50px 65px;
+  overflow: hidden;
+}
+
+.swiper-slide-container {
+  display: flex;
+  transition: transform 1s ease;
+}
+
+.swiper-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.swiper-slide img {
+  width: 90vw;
+  height: 150px;
+  
+}
+
+
+.active {
+  opacity: 1;
+  transform: scale(0.9);
+}
+
+.swiper-slide-carousel {
+  margin-right: 10px;
+  
+}
+
+ .swiper-slide-carousel span{
+  position: absolute;
+  bottom: 15px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-left: 5px;
+  text-align: center;
+  display: block;
+  border-left: 4px solid #ffdd00;
+  padding-left: 8px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.headingbb {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headingbb span.headingname {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 127%;
+  letter-spacing: 0.9px;
+  border-left: 4px solid #ffdd00;
+  padding-left: 8px;
+}
+
+
+.numbr-one-banner {
+  margin-top: 60px;
+  margin-left: 90px;
+}
+
+.numbr-one-banner img {
+  width: 90%;
+  height: auto;
+}
+.trending-span{
+  position: absolute;
+  bottom: 15px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-left: 5px;
+  text-align: center;
+  display: block;
+  border-left: 4px solid #ffdd00;
+  padding-left: 8px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.stripe img{
+margin-top: 30px;
+width: 85%;
+margin-left: 90px;
+
+}
+

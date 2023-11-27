@@ -180,14 +180,14 @@ import Footer from './Footer';
               <Link to='/'>
                 <Button
                   style={{
-                    width: '200px',
+                    width: '300px',
                     height: '2.5rem',
                     fontWeight: 'bold',
                     fontSize: '18px',
                     
-                    color: 'rgb(66, 162, 162)',
-                    backgroundColor: 'white',
-                    borderRadius: '5px',
+                    color: 'white',
+                    backgroundColor: 'black',
+                    borderRadius: '10px',
                     border: '1px solid rgb(66, 162, 162)',
                     cursor: 'pointer',
                   }}

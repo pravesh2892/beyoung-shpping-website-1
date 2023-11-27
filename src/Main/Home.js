@@ -23,14 +23,11 @@ import women3 from "../Images/women3.png";
 import women4 from "../Images/women4.png";
 import women5 from "../Images/women5.png";
 import women6 from "../Images/women6.png";
-import bewakoof7 from "../Images/bewakoof7.png";
-import bewakoof9 from "../Images/bewakoof9.png";
-import bewakoof8 from "../Images/bewakoof8.png";
+import banner from "../Images/BANNER-DESKTOP-VIEW.jpg";
 import men from "../Images/men.jpg";
 import women from "../Images/women.jpg";
 import accessories from "../Images/accessories.jpg";
 import winter from "../Images/winter.jpg";
-import merch from "../Images/merch.jpg";
 import shop1 from "../Images/shop1.webp";
 import shop2 from "../Images/shop2.webp";
 import shop3 from "../Images/shop3.jpg";
@@ -42,8 +39,30 @@ import shop8 from "../Images/shop8.webp";
 import shop9 from "../Images/shop9.webp";
 import shop10 from "../Images/shop10.webp";
 
+const data = [
+  "https://www.beyoung.in/api/catalog/homepage-3-10/Offers-strip/desktop/1-new.png",
+  "https://www.beyoung.in/api/catalog/homepage-3-10/Offers-strip/desktop/2-new.png",
+  "https://www.beyoung.in/api/catalog/homepage-3-10/Offers-strip/desktop/3-new.png",
+  "https://www.beyoung.in/api/catalog/homepage-3-10/Offers-strip/desktop/4-new.png",
+  "https://www.beyoung.in/api/catalog/homepage-3-10/Offers-strip/desktop/5-new.png",
+  "https://www.beyoung.in/api/catalog/homepage-3-10/Offers-strip/desktop/6-new.png",
+  "https://www.beyoung.in/api/catalog/homepage-3-10/Offers-strip/desktop/7-new.png",
+];
+
 export default function Home() {
   const [smallerScreen, setSmallerScreen] = useState(window.innerWidth < 1000);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
+    }, 5000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+  const translateValue = -currentIndex * 100;
 
   useEffect(() => {
     const handleResize = () => {
@@ -56,13 +75,13 @@ export default function Home() {
   }, []);
 
   const headingStyle = {
-    fontWeight: 'bold',
-    display: 'flex',
-    alignItems: 'center',
-    background: 'linear-gradient(90deg, rgba(248, 235, 39, 0.00) 0%, #F8EB27 48.11%, rgba(248, 235, 39, 0.00) 100%)',
-    width: '100%',
-    justifyContent: 'center',
-   
+    fontWeight: "bold",
+    display: "flex",
+    alignItems: "center",
+    background:
+      "linear-gradient(90deg, rgba(248, 235, 39, 0.00) 0%, #F8EB27 48.11%, rgba(248, 235, 39, 0.00) 100%)",
+    width: "100%",
+    justifyContent: "center",
   };
 
   return (
@@ -172,7 +191,6 @@ export default function Home() {
                   </Text>
                 </NavLink>
               </Box>
-             
             </Flex>
             <ImageSlider />
             <Box style={{ marginTop: "30px" }}>
@@ -183,7 +201,7 @@ export default function Home() {
                   textAlign: "center",
                 }}
               >
-                TRENDING CATEGORIES 
+                TRENDING CATEGORIES
               </Text>
               <Box>
                 <Link to="/subcategories/men/tshirt">
@@ -394,31 +412,60 @@ export default function Home() {
             </UnorderedList>
           </Flex>
           <Box>
+            <NavLink to="/categoris/men">
+              <img src={banner} style={{ width: "99vw", height: "auto" }} />
+            </NavLink>
+
+            <div className="swiper-slider">
+              <div
+                className="swiper-slide-container"
+                style={{ transform: `translateX(${translateValue}%)` }}
+              >
+                {data.map((url, index) => (
+                  <div
+                    key={index}
+                    className={
+                      index === currentIndex
+                        ? "swiper-slide active"
+                        : "swiper-slide"
+                    }
+                  >
+                    <img src={url} alt={`Slide ${index}`} />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div class="headingbb">
+              <span class="headingname">NEW ARRIVALS</span>
+            </div>
             <ImageSlider />
+           
           </Box>
 
           <Box>
-            <Box className="image1"></Box>
-            <NavLink to="/categories/men" style={{ textDecoration: "none" }}>
-              <Button className="button" style={{ marginRight: "450px" }}>
-                SHOP MEN
-              </Button>
-            </NavLink>
-            <NavLink to="/categories/women" style={{ textDecoration: "none" }}>
-              <Button className="button">SHOP WOMEN</Button>
-            </NavLink>
+          <div class="numbr-one-banner">
+              <img
+                src="https://www.beyoung.in/api/catalog/homepage-3-10/desktop/number-1-strip-banner/1.jpg"
+                data-src="https://www.beyoung.in/api/catalog/homepage-3-10/desktop/number-1-strip-banner/1.jpg"
+                alt="बीयंग भारत ka No. 1 Everyday Fashion Brand"
+                title="बीयंग भारत ka No. 1 Everyday Fashion Brand"
+              />
+
+              <img
+                src="https://www.beyoung.in/api/catalog/homepage-3-10/desktop/desktop-width/brand-icons-less-width.png"
+                style={{marginTop: "30px"}}
+                alt="beyoung strip"
+                title="beyoung strip"
+                data-src="https://www.beyoung.in/api/catalog/homepage-3-10/desktop/desktop-width/brand-icons-less-width.png"
+              />
+            </div>
           </Box>
-          <Box>
-            <Flex className="image2">
-              <Link to="/subcategories/men/tshirt">
-                <img src={bewakoof7} alt="bewakoof" style={{ width: "100%" }} />
-              </Link>
-              <Link to="/subcategories/men/jogger">
-                <img src={bewakoof9} alt="bewakoof" style={{ width: "100%" }} />
-              </Link>
-            </Flex>
-          </Box>
-          <Box style={{ marginLeft: "50px", marginBottom: "280px" }}>
+        
+          <div className="stripe">
+           <img  src="https://www.beyoung.in/api/catalog/homepage-3-10/desktop/strip/strip.jpg" data-src="https://www.beyoung.in/api/catalog/homepage-3-10/desktop/strip/strip.jpg" alt="beyoung shopping" />
+            </div>
+          
+          <Box style={{ marginLeft: "50px", marginBottom: "150px", marginTop:"100px" }}>
             <h3 style={headingStyle}>TRENDING CATEGORIES</h3>
             <Flex style={{ marginBottom: "20px" }}>
               <Link to="/subcategories/men/tshirt">
@@ -426,6 +473,7 @@ export default function Home() {
                   src={tshirt}
                   alt="tshirt"
                   style={{ width: "80%", marginRight: "10px" }}
+                 
                 />
               </Link>
               <Link to="/subcategories/men/shorts">
@@ -522,10 +570,12 @@ export default function Home() {
             </Flex>
           </Box>
           <Box>
-            <Box className="image2"></Box>
-            <Link to="/subcategories/men/sweater">
-              <img src='https://www.beyoung.in/api/catalog/homepage-3-10/desktop/number-1-strip-banner/1.jpg' alt="beyoung" style={{ width: "100%" }} />
-            </Link>
+              <img
+                src="https://www.beyoung.in/api/catalog/homepage-3-10/desktop/strip/scrolling-strip.jpg"
+                alt="beyoung"
+                style={{ width: "100%" }}
+              />
+           
           </Box>
           <Footer />
         </div>
