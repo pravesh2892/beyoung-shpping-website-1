@@ -12,8 +12,8 @@ import {RiFileListLine, RiExchangeLine} from 'react-icons/ri';
 import flag from '../Assets/flag.png';
 import info from '../Assets/info.png';
 import { useDispatch, useSelector } from "react-redux";
-import { addCart, addWishlist, removeWishlist } from "../Action";
-import { getProduct } from "../ServiceApi";
+import { addCart, addWishlist, removeWishlist } from "../Utils/Action";
+import { getProduct } from "../Utils/ServiceApi";
 import Footer from "./Footer";
 
 

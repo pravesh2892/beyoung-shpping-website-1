@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Accordion, AccordionButton, AccordionIcon, AccordionPanel, AccordionItem, Box} from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { FETCH_DATA} from '../Action';
+import { FETCH_DATA} from '../Utils/Action';
 
 export default function Filter({ onFilterChange, genderData}) {
 

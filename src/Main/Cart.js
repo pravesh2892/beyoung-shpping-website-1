@@ -6,11 +6,11 @@
   import { ChevronDownIcon } from "@chakra-ui/icons";
   import info from '../Assets/info.png';
   import emptybag from '../Assets/EMPTY-beyoung..png';
-  import { placeOrder } from '../ServiceApi';
+  import { placeOrder } from '../Utils/ServiceApi';
   import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, FormControl, FormLabel, 
   Input, ModalBody, useDisclosure, MenuButton, Menu, MenuList, MenuItem } from "@chakra-ui/react";
 import { useDispatch, useSelector } from 'react-redux';
-import {addWishlist, getCart, removeCart, removeWishlist } from '../Action';
+import {addWishlist, getCart, removeCart, removeWishlist } from '../Utils/Action';
 import Footer from './Footer';
 
   export default function Cart() {

@@ -5,7 +5,7 @@ import {AiOutlineLeft} from'react-icons/ai';
 import {TiTick} from 'react-icons/ti';
 import empty from '../Assets/empty.webp';
 import { useEffect, useState } from 'react';
-import { getSingleOrder } from '../ServiceApi';
+import { getSingleOrder } from '../Utils/ServiceApi';
 
 export default function OrderInfo() {
     const{id} = useParams();

@@ -17,9 +17,9 @@ import { CiUser } from "react-icons/ci";
 import OptionWomen from "./CategoriesWomen";
 import OptionMen from "./CategoriesOption";
 import { useDispatch, useSelector } from "react-redux";
-import { LOGOUT } from "../Action";
+import { LOGOUT } from "../Utils/Action";
 import ResNav from "./ResNav";
-import { searchOrder } from "../ServiceApi";
+import { searchOrder } from "../Utils/ServiceApi";
 
 
 export default function Nav() {

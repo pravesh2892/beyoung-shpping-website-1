@@ -7,7 +7,7 @@ import{BiSolidWalletAlt, BiSolidBank, BiSolidCaretRightCircle} from 'react-icons
 import {GiMoebiusTriangle} from 'react-icons/gi';
 import {FaIndianRupeeSign} from 'react-icons/fa6';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCart, removeCart} from '../Action';
+import { getCart, removeCart} from '../Utils/Action';
 import info from '../Assets/info.png';
 
 

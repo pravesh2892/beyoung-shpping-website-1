@@ -2,11 +2,11 @@ import React, { useEffect, useState} from 'react'
 import {Link, useNavigate} from 'react-router-dom';
 import {Container, Box, Text, Button, Flex} from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
-import { placeOrder, updateProfile } from '../ServiceApi';
+import { placeOrder, updateProfile } from '../Utils/ServiceApi';
 import {IoMdAdd} from 'react-icons/io';
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, FormControl, FormLabel, 
   Input, ModalBody, useDisclosure, MenuButton, Menu, MenuList, MenuItem } from "@chakra-ui/react";
-import {removeCart, getCart} from '../Action';
+import {removeCart, getCart} from '../Utils/Action';
 
 export default function Address() {
 

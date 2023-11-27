@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Spacer, Text } from '@chakra-ui/react'
 import { useState, useEffect} from 'react';
 import {NavLink, useNavigate} from 'react-router-dom';
-import { LOGIN_FAILURE, login } from '../Action';
+import { LOGIN_FAILURE, login } from '../Utils/Action';
 import loginPage from '../Assets/login-and-signup-image.jpg'
 import { useDispatch, useSelector } from 'react-redux';
 

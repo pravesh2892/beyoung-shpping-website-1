@@ -3,7 +3,7 @@ import  { useEffect, useState } from 'react';
 import { useParams, Link} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Container, Box, Flex, Text} from '@chakra-ui/react';
-import { FETCH_DATA, addWishlist, removeWishlist } from '../Action';
+import { FETCH_DATA, addWishlist, removeWishlist } from '../Utils/Action';
 import { Accordion, AccordionButton, AccordionIcon, AccordionPanel, AccordionItem} from '@chakra-ui/react';
 import ComponentCard from './ComponentCard';
 import Footer from './Footer';

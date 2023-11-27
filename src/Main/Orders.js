@@ -5,7 +5,7 @@ import empty from '../Assets/empty.webp';
 import { useEffect, useState } from 'react';
 import { useDispatch} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { getOrderList } from '../ServiceApi';
+import { getOrderList } from '../Utils/ServiceApi';
 
 export default function Orders(){
  

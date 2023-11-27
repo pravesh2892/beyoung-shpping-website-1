@@ -5,7 +5,7 @@ import {Link } from 'react-router-dom';
 import {BsHeart} from 'react-icons/bs';
 import { AiFillHeart } from 'react-icons/ai';
 import { useDispatch, useSelector } from 'react-redux';
-import { FETCH_DATA, addWishlist, removeWishlist} from '../Action';
+import { FETCH_DATA, addWishlist, removeWishlist} from '../Utils/Action';
 import noAvailable from '../Assets/noAvailable.jpg';
 
 
