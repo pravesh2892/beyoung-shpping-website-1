@@ -5,7 +5,7 @@ import {Box, Button, Container, Flex, Text} from '@chakra-ui/react';
 import {Link} from 'react-router-dom';
 import {RxCrossCircled} from 'react-icons/rx';
 import {PiShoppingBagLight} from 'react-icons/pi';
-import wishImage from '../Images/EMPTY-WISHLIST-PAGE.jpg';
+import wishImage from '../Assets/EMPTY-WISHLIST-PAGE.jpg';
 
 export default function Wishlist() {
      

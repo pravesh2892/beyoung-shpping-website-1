@@ -170,7 +170,7 @@ margin-bottom: 10px;
 }
 
 .image1{
-  background-image: url('./Images/bewakoof5.png');
+  background-image: url('./Assets/bewakoof5.png');
   width:100%;
   height:600px;
   background-size: contain;
@@ -820,7 +820,7 @@ border: 1px solid #42a2a2;
   border: 1px solid black;
   padding-left: 50px;
   margin-left: 50px;
-  background: url('./Images/search.png');
+  background: url('./Assets/search.png');
   background-repeat: no-repeat;
   background-size: 20px;
   background-position: 20px 10px;

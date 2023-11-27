@@ -1,7 +1,7 @@
 import { Box, Flex, Text, Button, OrderedList } from '@chakra-ui/react';
 import {Link} from 'react-router-dom'
 import {AiOutlineLeft} from'react-icons/ai';
-import empty from '../Images/empty.webp';
+import empty from '../Assets/empty.webp';
 import { useEffect, useState } from 'react';
 import { useDispatch} from 'react-redux';
 import { useNavigate } from 'react-router-dom';

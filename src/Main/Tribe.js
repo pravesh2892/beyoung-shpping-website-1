@@ -1,6 +1,6 @@
 import React from 'react'
-import tribe from '../Images/tribe.png';
-import tribe2 from '../Images/tribe2.png';
+import tribe from '../Assets/tribe.png';
+import tribe2 from '../Assets/tribe2.png';
 
 export default function() {
   return (

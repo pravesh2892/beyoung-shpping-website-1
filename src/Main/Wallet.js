@@ -28,7 +28,7 @@ export default function Wallet() {
     <Box style={{marginTop:"10px", marginLeft:"10px", height:"80px", marginBottom:"20px"}}>
         <Flex>
         <AiFillStar style={{color: "red", marginTop:"20px", marginRight:"20px", fontSize:"25px"}}/>
-        <Text style={{marginRight:"60%", fontSize:"20px"}}>Bewakoof Credit</Text>
+        <Text style={{marginRight:"60%", fontSize:"20px"}}>Beyoung Credit</Text>
         <Text style={{color:"#42A2A2", fontWeight:"bold"}}>Balance : ₹0.0</Text>
         </Flex>
         <Text style={{color: "grey", marginTop:"-10px", fontSize:"12px",marginLeft:"10px"}}>Earned from referral, offers and cash-back. Limited validity</Text>
@@ -39,7 +39,7 @@ export default function Wallet() {
     <Box style={{marginTop:"10px", marginLeft:"10px", height:"80px"}}>
         <Flex>
         <FaRupeeSign style={{color: "green", marginTop:"20px", marginRight:"20px", fontSize:"25px"}}/>
-        <Text style={{marginRight:"60%", fontSize:"20px"}}>Bewakoof Cash</Text>
+        <Text style={{marginRight:"60%", fontSize:"20px"}}>Beyoung Cash</Text>
         <Text style={{color:"#42A2A2", fontWeight:"bold"}}>Balance : ₹0.0</Text>
         </Flex>
         <Text style={{color: "grey", marginTop:"-10px", fontSize:"12px",marginLeft:"10px"}}>

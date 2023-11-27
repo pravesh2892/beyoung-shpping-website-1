@@ -6,8 +6,8 @@ import {AiOutlineSearch, AiOutlineHeart} from 'react-icons/ai'
 import {PiShoppingBagLight} from 'react-icons/pi'
 import { NavLink, useLocation } from 'react-router-dom';
 import React from 'react';  
-import bewakoofLogo from '../Images/bewakoofLogo.png';
-import flag from'../Images/flag.png';
+import bewakoofLogo from '../Assets/bewakoofLogo.png';
+import flag from'../Assets/flag.png';
 import Footer from '../Main/Footer';
 import {GrUserManager, GrUserFemale} from 'react-icons/gr';
 import {GiStarFormation} from 'react-icons/gi';

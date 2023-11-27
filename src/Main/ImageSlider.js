@@ -3,14 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from "react-router-dom";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css'
-import bewakoof1 from '../Images/bewakoof1.png';
-import bewakoof2 from '../Images/bewakoof2.png';
-import bewakoof3 from '../Images/bewakoof3.png';
-import bewakoof4 from '../Images/bewakoof4.png';
-import winter   from '../Images/beyoung-winter.jpg';
-import shirts  from '../Images/beyoung-shirt.jpg';
-import tshirts from '../Images/beyoung-tshirts.jpg'
-import joggers from '../Images/beyoung-joggers.jpg'
+
+import winter   from '../Assets/beyoung-winter.jpg';
+import shirts  from '../Assets/beyoung-shirt.jpg';
+import tshirts from '../Assets/beyoung-tshirts.jpg'
+import joggers from '../Assets/beyoung-joggers.jpg'
 
 const responsive = {
     superLargeDesktop: {

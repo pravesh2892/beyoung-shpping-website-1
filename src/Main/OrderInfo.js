@@ -3,7 +3,7 @@ import { Box, Flex, Text, Button} from '@chakra-ui/react';
 import {Link, useParams} from 'react-router-dom'
 import {AiOutlineLeft} from'react-icons/ai';
 import {TiTick} from 'react-icons/ti';
-import empty from '../Images/empty.webp';
+import empty from '../Assets/empty.webp';
 import { useEffect, useState } from 'react';
 import { getSingleOrder } from '../ServiceApi';
 

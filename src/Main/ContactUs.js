@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Text, Flex } from '@chakra-ui/react';
 import { useState } from 'react';
-import airoplane from '../Images/airoplane.webp'
+import airoplane from '../Assets/airoplane.webp'
 
 export default function ContactUs() {
     const[search, setSearch] = useState('');

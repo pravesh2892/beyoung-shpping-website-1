@@ -1,10 +1,5 @@
 import { Container, Divider, Center, Box,Flex, Text} from "@chakra-ui/react";
-import Disney from '../Images/Disney.webp';
-import garfield from '../Images/garfield.png';
-import Naruto from '../Images/Naruto.jpg';
-import tom from '../Images/tom.png';
-import Marvel from '../Images/Marvel.jpg';
-import minion from '../Images/minion.jpg';
+
 import { NavLink } from "react-router-dom";
 
 const OptionWomen =()=>{

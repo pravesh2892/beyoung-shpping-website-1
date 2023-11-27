@@ -1,7 +1,7 @@
 import React from 'react';
 import { Flex,Text, Button} from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-import placed from '../Images/order-succesfull.gif'
+import placed from '../Assets/order-succesfull.gif'
 
 export default function PlaceOrder() {
   return (

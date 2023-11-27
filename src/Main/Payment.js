@@ -8,7 +8,7 @@ import {GiMoebiusTriangle} from 'react-icons/gi';
 import {FaIndianRupeeSign} from 'react-icons/fa6';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCart, removeCart} from '../Action';
-import info from '../Images/info.png';
+import info from '../Assets/info.png';
 
 
 

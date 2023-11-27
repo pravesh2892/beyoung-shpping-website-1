@@ -4,8 +4,8 @@
   import { Container, Flex, Box, Button, Text, propNames} from '@chakra-ui/react';
   import {FaTruck} from 'react-icons/fa';
   import { ChevronDownIcon } from "@chakra-ui/icons";
-  import info from '../Images/info.png';
-  import emptybag from '../Images/EMPTY-beyoung..png';
+  import info from '../Assets/info.png';
+  import emptybag from '../Assets/EMPTY-beyoung..png';
   import { placeOrder } from '../ServiceApi';
   import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, FormControl, FormLabel, 
   Input, ModalBody, useDisclosure, MenuButton, Menu, MenuList, MenuItem } from "@chakra-ui/react";

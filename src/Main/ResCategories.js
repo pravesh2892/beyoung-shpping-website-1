@@ -1,19 +1,19 @@
 import { Flex, Text, Box, Container} from '@chakra-ui/react'
 import React, { useState } from 'react';
-import res1 from '../Images/res1.jpg';
-import res2 from '../Images/res2.jpg';
-import res3  from '../Images/res3.jpg';
-import res4 from '../Images/res4.jpg';
-import res5 from '../Images/res5.jpg';
-import res6  from '../Images/res6.jpg';
-import res8  from '../Images/res8.jpg';
-import res9 from '../Images/res9.jpg';
-import resw1 from '../Images/resw1.jpg';
-import resw2 from '../Images/resw2.jpg';
-import resw3  from '../Images/resw3.jpg';
-import resw4 from '../Images/resw4.webp';
-import resw6  from '../Images/resw6.jpg';
-import resw7  from '../Images/resw7.webp';
+import res1 from '../Assets/res1.jpg';
+import res2 from '../Assets/res2.jpg';
+import res3  from '../Assets/res3.jpg';
+import res4 from '../Assets/res4.jpg';
+import res5 from '../Assets/res5.jpg';
+import res6  from '../Assets/res6.jpg';
+import res8  from '../Assets/res8.jpg';
+import res9 from '../Assets/res9.jpg';
+import resw1 from '../Assets/resw1.jpg';
+import resw2 from '../Assets/resw2.jpg';
+import resw3  from '../Assets/resw3.jpg';
+import resw4 from '../Assets/resw4.webp';
+import resw6  from '../Assets/resw6.jpg';
+import resw7  from '../Assets/resw7.webp';
 import { useLocation, useParams } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 

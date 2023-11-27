@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { Container, Box, Flex, Text, Button } from "@chakra-ui/react";
 import { FaFacebookSquare } from "react-icons/fa";
 import { AiOutlineInstagram } from "react-icons/ai";
-import bewakoofLogo from "../Images/bewakoofLogo.png";
+
 import {
   BiLogoTwitter,
   BiLogoSnapchat,
@@ -132,16 +132,7 @@ export default function Footer() {
                       to="/"
                       style={{ color: "black", textDecoration: "none" }}
                     >
-                      <img
-                        src={bewakoofLogo}
-                        alt="logo"
-                        style={{
-                          width: "30px",
-                          marginLeft: "5px",
-                          height: "20px",
-                          paddingTop: "5px",
-                        }}
-                      />
+                     
                       <Text
                         style={{
                           marginTop: "5px",

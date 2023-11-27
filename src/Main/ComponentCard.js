@@ -6,7 +6,7 @@ import {BsHeart} from 'react-icons/bs';
 import { AiFillHeart } from 'react-icons/ai';
 import { useDispatch, useSelector } from 'react-redux';
 import { FETCH_DATA, addWishlist, removeWishlist} from '../Action';
-import noAvailable from '../Images/noAvailable.jpg';
+import noAvailable from '../Assets/noAvailable.jpg';
 
 
 const ComponentCard = ({ data }) => {
