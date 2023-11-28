@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {Link, useParams} from 'react-router-dom';
 import { Container, Flex, Button, Box, useDisclosure, Text } from '@chakra-ui/react';
 import {HiOutlineMenuAlt1} from 'react-icons/hi'
@@ -6,23 +6,34 @@ import {AiOutlineSearch, AiOutlineHeart} from 'react-icons/ai'
 import {PiShoppingBagLight} from 'react-icons/pi'
 import { NavLink, useLocation } from 'react-router-dom';
 import React from 'react';  
-import bewakoofLogo from '../Assets/bewakoofLogo.png';
-import flag from'../Assets/flag.png';
+import beyoungLogo from '../Assets/beyoung-logo-removebg.png';
 import Footer from '../Components/Footer';
-import {GrUserManager, GrUserFemale} from 'react-icons/gr';
-import {GiStarFormation} from 'react-icons/gi';
+import {GrUserManager,GrUser, GrUserFemale} from 'react-icons/gr';
+import { GiClothes } from "react-icons/gi";
+import { TbMoodKid } from "react-icons/tb";
 import {LiaShoePrintsSolid} from 'react-icons/lia';
 import {BsFillLightningFill, BsCalendar3} from 'react-icons/bs';
 import {MdOutlineCelebration} from 'react-icons/md';
+import { AiOutlineClose } from 'react-icons/ai';
 import {RiMickeyLine} from 'react-icons/ri';
+import { RiCloseLine } from "react-icons/ri";
 import {AiOutlineLeft} from 'react-icons/ai';
 
 export default function ResNav() {
+  const [userInfo, setUserInfo] = useState([]);
   const {gender, id} = useParams();
   console.log(id , gender)
   const { isOpen, onOpen, onClose } = useDisclosure();
   const location = useLocation();
  
+
+  useEffect(() => {
+    const user = localStorage.getItem("signup");
+    if (user) {
+      const parseData = JSON.parse(user);
+      setUserInfo(parseData);
+    }
+  }, []);
 
   return (
     <div style={{ position: "fixed", left: 0, top: 0, right: 0, zIndex: "100", backgroundColor: "white", margin:"0" }}>
@@ -122,21 +133,21 @@ export default function ResNav() {
         height="100%"
         transition="left 0.3s"
         zIndex={10}>
+          <Box style={{ textAlign: "right", paddingRight: "10px", paddingTop: "5px" }}>
+                  <Button onClick={onClose} variant="link">
+                    <RiCloseLine style={{ fontSize: "24px" }} />
+                  </Button>
+                </Box>
+
       <Box>
-      <h2 style={{marginLeft:"20px"}}>Hello </h2>
+      <h2 style={{marginLeft:"20px"}}>Hello, {userInfo?.signup?.data?.name} </h2>
       <hr/>
       </Box>
-      <Flex style={{marginTop:"20px"}}>
-        <img src={flag} alt="flag" style={{width:"30px", height:"30px", marginLeft:"30px"}}/>
-        <Text style={{marginLeft:"20px", marginTop:"-1px", fontSize:"20px"}}>India</Text>
-      </Flex>
-
-      <Text style={{color:"grey", marginLeft:"30px", letterSpacing:"1px"}}>SHOP IN</Text>
       
       <NavLink to="/ResCategory/men" style={{textDecoration:"none", color:"black"}}>
       <Flex style={{marginLeft:"30px", marginBottom:"20px"}}>
       <Text style={{fontWeight:"bold"}}>Men</Text>
-      <GrUserManager style={{marginLeft:"58%", marginTop:"20px", fontSize:"30px"}} />
+      <GrUser style={{marginLeft:"58%", marginTop:"20px", fontSize:"30px"}} />
       </Flex>
       </NavLink>
 
@@ -149,22 +160,12 @@ export default function ResNav() {
 
       <Flex style={{marginLeft:"30px", marginBottom:"20px"}}>
       <Text style={{fontWeight:"bold"}}>Accessories</Text>
-      <LiaShoePrintsSolid style={{marginLeft:"40%", marginTop:"20px", fontSize:"30px"}} />
+      <GiClothes style={{marginLeft:"40%", marginTop:"20px", fontSize:"30px"}} />
       </Flex>
 
       <Flex style={{marginLeft:"30px", marginBottom:"20px"}}>
-      <Text style={{fontWeight:"bold"}}>Shop By Fandom</Text>
-      <BsFillLightningFill style={{marginLeft:"25%", marginTop:"20px", fontSize:"30px"}} />
-      </Flex>
-
-      <Flex style={{marginLeft:"30px", marginBottom:"20px"}}>
-      <Text style={{fontWeight:"bold"}}>Design Of the Week</Text>
-      <BsCalendar3 style={{marginLeft:"18%", marginTop:"20px", fontSize:"30px"}} />
-      </Flex>
-
-      <Flex style={{marginLeft:"30px", marginBottom:"30px"}}>
-      <Text style={{fontWeight:"bold"}}>Super Sale</Text>
-      <MdOutlineCelebration style={{marginLeft:"45%", marginTop:"20px", fontSize:"30px"}} />
+      <Text style={{fontWeight:"bold"}}>Kids</Text>
+      <TbMoodKid style={{marginLeft:"59%", marginTop:"20px", fontSize:"30px"}} />
       </Flex>
      
       </Box>
@@ -181,7 +182,7 @@ export default function ResNav() {
         />
       )}
     </Flex>
-    <img src={bewakoofLogo} alt="logo" style={{width:"30px", height:"20px", marginLeft:"10px", paddingTop:"5px"}}/>
+    <img src={beyoungLogo} alt="logo" style={{width:"35px", height:"25px", marginLeft:"10px", paddingTop:"5px"}}/>
     </Flex>
     <Flex>
     <AiOutlineSearch style={{paddingTop:"7px" , marginRight:"10px"}} />

@@ -57,17 +57,29 @@ const responsive = {
         <>
         <div style={{marginLeft:"10px", paddingTop:"10px", marginTop:"1rem", zIndex:"0"}}>
         <Carousel {...carouselOptions}>
-          <div>
+          <div className='swiper-slide-carousel'>
+          <Link to="/subcategories/men/sweater">
             <img style={{width:"370px"}} src={winter} alt="winter" />
+            <span>Winter wear</span>
+            </Link>
           </div>
-          <div>
+          <div className='swiper-slide-carousel'>
+          <Link to="/subcategories/men/shirt">
             <img style={{width:"370px"}} src={shirts} alt="shrits" />
+            <span>Shirts</span>
+            </Link>
           </div>
-          <div>
+          <div className='swiper-slide-carousel'>
+          <Link to="/subcategories/men/tshirt">
             <img style={{width:"370px"}} src={tshirts} alt="tshirts" />
+            <span>Oversize T-Shirts</span>
+            </Link>
           </div>
-          <div>
+          <div className='swiper-slide-carousel'>
+          <Link to="/subcategories/men/jogger">
             <img style={{width:"370px"}} src={joggers} alt="joggers" />
+            <span>Pants</span>
+            </Link>
           </div>
         </Carousel>
       </div>
