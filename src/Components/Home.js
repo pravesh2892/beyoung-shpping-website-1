@@ -11,18 +11,18 @@ import {
 } from "@chakra-ui/react";
 import { Link, NavLink } from "react-router-dom";
 import Footer from "./Footer";
-import tshirt from "../Assets/tshirt.png";
-import shorts from "../Assets/shorts.png";
-import joggers from "../Assets/joggers.png";
-import pyjama from "../Assets/pyjama.png";
-import shirts from "../Assets/shirts.png";
-import oversized from "../Assets/oversized.png";
-import women1 from "../Assets/women1.png";
-import women2 from "../Assets/women2.png";
-import women3 from "../Assets/women3.png";
-import women4 from "../Assets/women4.png";
-import women5 from "../Assets/women5.png";
-import women6 from "../Assets/women6.png";
+import tshirt from "../Assets/printed-tshirt.jpg";
+import shorts from "../Assets/shorts-men.jpg";
+import joggers from "../Assets/joggers-men.jpg";
+import pyjama from "../Assets/payjam-men-1.jpg";
+import shirts from "../Assets/shirts-men-1.jpg";
+import oversized from "../Assets/oversized-men.jpg";
+import women1 from "../Assets/printed-tshirt-female.jpg";
+import women2 from "../Assets/female-shorts.jpg";
+import women3 from "../Assets/female-joggers.jpg";
+import women4 from "../Assets/jumpsuit.jpg";
+import women5 from "../Assets/pyjama-female.jpg";
+import women6 from "../Assets/oversized-female.jpg";
 import banner from "../Assets/BANNER-DESKTOP-VIEW.jpg";
 import men from "../Assets/men.jpg";
 import women from "../Assets/women.jpg";
@@ -49,9 +49,31 @@ const data = [
   "https://www.beyoung.in/api/catalog/homepage-3-10/Offers-strip/desktop/7-new.png",
 ];
 
+const data1 = [
+  "https://www.beyoung.in/api/catalog/homepage-3-10/logos-new/2.png",
+  "https://www.beyoung.in/api/catalog/homepage-3-10/logos-new/3.png",
+  "https://www.beyoung.in/api/catalog/homepage-3-10/logos-new/4.png",
+  "https://www.beyoung.in/api/catalog/homepage-3-10/logos-new/5.png",
+  "https://www.beyoung.in/api/catalog/homepage-3-10/logos-new/1.png",
+];
+
 export default function Home() {
   const [smallerScreen, setSmallerScreen] = useState(window.innerWidth < 1000);
+  const [currentIndex1, setCurrentIndex1] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [slideIndex, setSlideIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSlideIndex((prevIndex) => (prevIndex + 1) % data1.length);
+    }, 3000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  const translateValue1 = -slideIndex * (100 / (data1.length + 2));
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -439,11 +461,10 @@ export default function Home() {
               <span class="headingname">NEW ARRIVALS</span>
             </div>
             <ImageSlider />
-           
           </Box>
 
           <Box>
-          <div class="numbr-one-banner">
+            <div class="numbr-one-banner">
               <img
                 src="https://www.beyoung.in/api/catalog/homepage-3-10/desktop/number-1-strip-banner/1.jpg"
                 data-src="https://www.beyoung.in/api/catalog/homepage-3-10/desktop/number-1-strip-banner/1.jpg"
@@ -453,59 +474,60 @@ export default function Home() {
 
               <img
                 src="https://www.beyoung.in/api/catalog/homepage-3-10/desktop/desktop-width/brand-icons-less-width.png"
-                style={{marginTop: "30px"}}
+                style={{ marginTop: "30px" }}
                 alt="beyoung strip"
                 title="beyoung strip"
                 data-src="https://www.beyoung.in/api/catalog/homepage-3-10/desktop/desktop-width/brand-icons-less-width.png"
               />
             </div>
           </Box>
-        
+
           <div className="stripe">
-           <img  src="https://www.beyoung.in/api/catalog/homepage-3-10/desktop/strip/strip.jpg" data-src="https://www.beyoung.in/api/catalog/homepage-3-10/desktop/strip/strip.jpg" alt="beyoung shopping" />
-            </div>
-          
-          <Box style={{ marginLeft: "50px", marginBottom: "150px", marginTop:"100px" }}>
+            <img
+              src="https://www.beyoung.in/api/catalog/homepage-3-10/desktop/strip/strip.jpg"
+              data-src="https://www.beyoung.in/api/catalog/homepage-3-10/desktop/strip/strip.jpg"
+              alt="beyoung shopping"
+            />
+          </div>
+
+          <Box
+            style={{
+              marginLeft: "50px",
+              marginBottom: "150px",
+              marginTop: "100px",
+            }}
+          >
             <h3 style={headingStyle}>TRENDING CATEGORIES</h3>
             <Flex style={{ marginBottom: "20px" }}>
               <Link to="/subcategories/men/tshirt">
                 <img
                   src={tshirt}
                   alt="tshirt"
-                  style={{ width: "80%", marginRight: "10px" }}
-                 
+                  style={{ width: "94%", marginRight: "5px", minHeight: "80%", borderRadius:"5px" }}
                 />
               </Link>
               <Link to="/subcategories/men/shorts">
                 <img
                   src={shorts}
                   alt="shorts"
-                  style={{ width: "80%", marginRight: "10px" }}
+                  style={{ width: "94%", marginRight: "5px", minHeight: "80%", borderRadius:"5px" }}
                 />
               </Link>
               <Link to="/subcategories/men/jogger">
-                <img
-                  src={joggers}
-                  alt="joggers"
-                  style={{ width: "80%", marginRight: "10px" }}
-                />
+                <img src={joggers} alt="joggers" style={{ width: "70%", marginLeft:"12px", borderRadius:"5px"}} />
               </Link>
               <Link to="/subcategories/men/shirt">
                 <img
                   src={shirts}
                   alt="shirts"
-                  style={{
-                    width: "80%",
-                    marginTop: "-4px",
-                    marginRight: "10px",
-                  }}
+                  style={{width: "77%" , marginLeft:"-30px", borderRadius:"5px"}}
                 />
               </Link>
               <Link to="/subcategories/men/pyjamas">
                 <img
                   src={pyjama}
                   alt="pyjama"
-                  style={{ width: "80%", marginRight: "10px" }}
+                  style={{ width: "100%", marginRight: "10px", marginLeft:"-49px" , borderRadius:"5px" }}
                 />
               </Link>
               <Link to="/subcategories/men/tshirt">
@@ -513,9 +535,11 @@ export default function Home() {
                   src={oversized}
                   alt="oversized"
                   style={{
-                    width: "80%",
+                    width: "100%",
                     marginRight: "10px",
-                    marginTop: "-4px",
+                    marginTop: "3px",
+                    marginLeft:"-28",
+                   borderRadius:"5px"
                   }}
                 />
               </Link>
@@ -525,7 +549,7 @@ export default function Home() {
                 <img
                   src={women1}
                   alt="tshirt"
-                  style={{ width: "80%", marginRight: "15px" }}
+                  style={{ width: "65%", marginRight: "15px" , borderRadius:"5px" }}
                 />
               </Link>
               <Link to="/subcategories/women/shirt">
@@ -533,9 +557,12 @@ export default function Home() {
                   src={women2}
                   alt="shorts"
                   style={{
-                    width: "80%",
+                    width: "71%",
                     marginRight: "15px",
-                    marginTop: "3px",
+                    marginTop: "1px",
+                    marginLeft:"-126px",
+                    paddingLeft:"50px" ,
+                     borderRadius:"5px"
                   }}
                 />
               </Link>
@@ -543,39 +570,62 @@ export default function Home() {
                 <img
                   src={women3}
                   alt="joggers"
-                  style={{ width: "80%", marginRight: "15px" }}
+                  style={{ width: "165%", marginRight: "15px", marginLeft:"-206px", paddingLeft:"85px" , borderRadius:"5px" }}
                 />
               </Link>
               <Link to="/subcategories/women/jumpsuit">
                 <img
                   src={women4}
                   alt="dress"
-                  style={{ width: "80%", marginRight: "15px" }}
+                  style={{ width: "126%", marginRight: "15px", marginLeft:"-94px", paddingLeft:"85px" , borderRadius:"5px" }}
                 />
               </Link>
               <Link to="/subcategories/women/jogger">
                 <img
                   src={women5}
                   alt="pyjama"
-                  style={{ width: "80%", marginRight: "15px" }}
+                  style={{ width: "85%", marginRight: "15px" , marginLeft:"20px", paddingLeft:"60px", borderRadius:"5px"}}
                 />
               </Link>
               <Link to="/subcategories/women/tshirt">
                 <img
                   src={women6}
                   alt="oversized"
-                  style={{ width: "80%", marginRight: "15px" }}
+                  style={{ width: "63%", marginRight: "15px", paddingLeft:"70px" , borderRadius:"5px"}}
                 />
               </Link>
             </Flex>
           </Box>
+          <p class="featuressec">
+            <span class="featuredon">FEATURED ON</span>
+          </p>
+          <div className="swiper-slider-small">
+            <div
+              className="swiper-slide-container-small"
+              style={{ transform: `translateX(${translateValue1}%)` }}
+            >
+              {[data1[data1.length - 1], ...data1, data1[0]].map(
+                (url, index) => (
+                  <div
+                    key={index}
+                    className={
+                      index === currentIndex1
+                        ? "swiper-slide-small active"
+                        : "swiper-slide-small"
+                    }
+                  >
+                    <img src={url} alt={`Slide ${index}`} />
+                  </div>
+                )
+              )}
+            </div>
+          </div>
           <Box>
-              <img
-                src="https://www.beyoung.in/api/catalog/homepage-3-10/desktop/strip/scrolling-strip.jpg"
-                alt="beyoung"
-                style={{ width: "100%" }}
-              />
-           
+            <img
+              src="https://www.beyoung.in/api/catalog/homepage-3-10/desktop/strip/scrolling-strip.jpg"
+              alt="beyoung"
+              style={{ width: "100%" }}
+            />
           </Box>
           <Footer />
         </div>

@@ -888,6 +888,49 @@ border: 1px solid #42a2a2;
   
 }
 
+.swiper-slider-small {
+  position: relative;
+  width: 100%;
+  margin: 50px 65px;
+  overflow: hidden;
+}
+
+.swiper-slide-container-small {
+  display: flex;
+  transition: transform 2s ease;
+  margin: 0 -10px; /* Adjust as needed */
+}
+
+.swiper-slide-small {
+  width: calc(100% / 3); /* Adjust the width of each slide as needed */
+  box-sizing: border-box;
+  padding: 0 30px; /* Adjust as needed to create space between slides */
+}
+
+.swiper-slider-small img {
+  width: 100%;
+  height: auto;
+}
+
+.featuressec {
+  margin-top: 70px;
+  font-size: 43px;
+  border-bottom: 4px solid #f8eb27;
+  line-height: 0;
+  color: #000000;
+  text-align: center;
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-bottom: 50px;
+}
+
+.featuressec span.featuredon {
+  background: #fff;
+  padding: 0 10px;
+  letter-spacing: 0.9px;
+  font-size: 30px;
+  font-weight: 700;
+}
 
 .active {
   opacity: 1;

@@ -155,15 +155,10 @@ export async function getWishlistItem(){
         // //console.log("response", response);
         const wishlistData = await response.json();
         console.log(wishlistData.data)
-        // localStorage.setItem(
-        //     "wishlistData",
-        //     JSON.stringify({
-        //         wishlistData: wishlistData,
-        //     })
-        // );
+      
         return wishlistData;
         }else{
-            //console.log("not added")
+           
         }
         }
     }
@@ -185,18 +180,13 @@ export async function getWishlistItem(){
         }
     }))
     if(response.ok){
-        // const wishlistData = JSON.parse(localStorage.getItem("wishlistData"));
-        // //console.log(wishlistData);
-        // if(wishlistData){
-        //     const updatedWishlist = wishlistData?.wishlistData.data?.filter(item=>item.id !==productId);
-        //     wishlistData.wishlistData.data = updatedWishlist;
-        //     }
+       
         const wishlistData = await response.json();
-        //console.log(wishlistData.data)
+       
         return wishlistData;
         }
         else{
-            //console.log('Error:', response.status, response.statusText)
+            
         }
 
     }
@@ -205,11 +195,9 @@ export async function getWishlistItem(){
 export async function addCartList(productID, quantity){
     //console.log(productID);
     const userInfo = localStorage.getItem("signup")
-    //console.log(productID);
-    //console.log("userData", userInfo);
+   
     if (userInfo){
     const parseData = JSON.parse(userInfo);
-    //console.log(parseData.signup.token); 
     const response = await(fetch(`https://academics.newtonschool.co/api/v1/ecommerce/cart/${productID}`,
      {
         method: "PATCH",
@@ -378,24 +366,7 @@ export async function getOrderList() {
     }
   }
 
-  // export async function searchOrder(title, searchTerm) {
-  //     try {
-  //      const response = await fetch(`https://academics.newtonschool.co/api/v1/ecommerce/clothes/products?search={"brand":"${searchTerm}"}`, 
-  //      {
-  //       method:'GET',
-  //       headers: {
-  //           projectId: "3ggih9l8ac0f",
-  //       },
-  //      })
-  //      if(response.ok){
-  //       const searchData = await response.json();
-  //       console.log(searchData);
-  //       return searchData;
-  //      }
-  //     }catch (error) {
-  //       console.error("Something went wrong");
-  //     }
-  //   }
+ 
 
   export async function searchOrder(title, searchTerm) {
     try {

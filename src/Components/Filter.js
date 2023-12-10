@@ -7,7 +7,7 @@ import { FETCH_DATA} from '../Utils/Action';
 export default function Filter({ onFilterChange, genderData}) {
 
     const getData = useSelector((store)=>{
-        console.log(store, "store debug");
+        console.log(store, "store");
         return store.data;
     })
 
