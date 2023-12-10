@@ -104,6 +104,8 @@ export default function Home() {
       "linear-gradient(90deg, rgba(248, 235, 39, 0.00) 0%, #F8EB27 48.11%, rgba(248, 235, 39, 0.00) 100%)",
     width: "100%",
     justifyContent: "center",
+    marginTop:"30px",
+    marginBottom:"30px"
   };
 
   return (
@@ -497,10 +499,11 @@ export default function Home() {
               marginTop: "100px",
             }}
           >
-            <h3 style={headingStyle}>TRENDING CATEGORIES</h3>
+            <h3 style={headingStyle}>FOR MEN</h3>
             <Flex style={{ marginBottom: "20px" }}>
               <Link to="/subcategories/men/tshirt">
                 <img
+                className="hover-effect"
                   src={tshirt}
                   alt="tshirt"
                   style={{ width: "94%", marginRight: "5px", minHeight: "80%", borderRadius:"5px" }}
@@ -508,16 +511,20 @@ export default function Home() {
               </Link>
               <Link to="/subcategories/men/shorts">
                 <img
+                className="hover-effect"
                   src={shorts}
                   alt="shorts"
                   style={{ width: "94%", marginRight: "5px", minHeight: "80%", borderRadius:"5px" }}
                 />
               </Link>
               <Link to="/subcategories/men/jogger">
-                <img src={joggers} alt="joggers" style={{ width: "70%", marginLeft:"12px", borderRadius:"5px"}} />
+                <img 
+                className="hover-effect"
+                src={joggers} alt="joggers" style={{ width: "70%", marginLeft:"12px", borderRadius:"5px"}} />
               </Link>
               <Link to="/subcategories/men/shirt">
                 <img
+                className="hover-effect"
                   src={shirts}
                   alt="shirts"
                   style={{width: "77%" , marginLeft:"-30px", borderRadius:"5px"}}
@@ -525,6 +532,7 @@ export default function Home() {
               </Link>
               <Link to="/subcategories/men/pyjamas">
                 <img
+                className="hover-effect"
                   src={pyjama}
                   alt="pyjama"
                   style={{ width: "100%", marginRight: "10px", marginLeft:"-49px" , borderRadius:"5px" }}
@@ -532,6 +540,7 @@ export default function Home() {
               </Link>
               <Link to="/subcategories/men/tshirt">
                 <img
+                className="hover-effect"
                   src={oversized}
                   alt="oversized"
                   style={{
@@ -544,9 +553,11 @@ export default function Home() {
                 />
               </Link>
             </Flex>
+            <h3 style={headingStyle}>FOR WOMEN</h3>
             <Flex>
               <Link to="/subcategories/women/tshirt">
                 <img
+                className="hover-effect"
                   src={women1}
                   alt="tshirt"
                   style={{ width: "65%", marginRight: "15px" , borderRadius:"5px" }}
@@ -554,6 +565,7 @@ export default function Home() {
               </Link>
               <Link to="/subcategories/women/shirt">
                 <img
+                className="hover-effect"
                   src={women2}
                   alt="shorts"
                   style={{
@@ -568,6 +580,7 @@ export default function Home() {
               </Link>
               <Link to="/subcategories/women/jogger">
                 <img
+                className="hover-effect"
                   src={women3}
                   alt="joggers"
                   style={{ width: "165%", marginRight: "15px", marginLeft:"-206px", paddingLeft:"85px" , borderRadius:"5px" }}
@@ -575,6 +588,7 @@ export default function Home() {
               </Link>
               <Link to="/subcategories/women/jumpsuit">
                 <img
+                className="hover-effect"
                   src={women4}
                   alt="dress"
                   style={{ width: "126%", marginRight: "15px", marginLeft:"-94px", paddingLeft:"85px" , borderRadius:"5px" }}
@@ -582,6 +596,7 @@ export default function Home() {
               </Link>
               <Link to="/subcategories/women/jogger">
                 <img
+                className="hover-effect"
                   src={women5}
                   alt="pyjama"
                   style={{ width: "85%", marginRight: "15px" , marginLeft:"20px", paddingLeft:"60px", borderRadius:"5px"}}
@@ -589,6 +604,7 @@ export default function Home() {
               </Link>
               <Link to="/subcategories/women/tshirt">
                 <img
+                className="hover-effect"
                   src={women6}
                   alt="oversized"
                   style={{ width: "63%", marginRight: "15px", paddingLeft:"70px" , borderRadius:"5px"}}
