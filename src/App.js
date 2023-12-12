@@ -18,7 +18,6 @@ import Address from './Components/Address';
 import Profile from './Components/Profile';
 import ResCategories from './Components/ResCategories';
 import NotAvailable from './Components/NotAvailable';
-import Tribe from './Components/Tribe';
 import Payment from './Components/Payment';
 import OrderInfo from './Components/OrderInfo';
 import SearchResult from './Components/SearchResult';
@@ -47,7 +46,6 @@ function App() {
     <Route path="/Profile" element={<Profile/>}/>
     <Route path="/ResCategory/:id" element={<ResCategories/>}/>
     <Route path="/NotAvailable" element={<NotAvailable/>}/>
-    <Route path='/Tribe' element={<Tribe/>}/> 
     <Route path="/Payment" element={<Payment/>}/>
     <Route path="/OrderInfo/:id" element={<OrderInfo/>}/>
     <Route path= '/SearchResult/:id' element={<SearchResult />}/>

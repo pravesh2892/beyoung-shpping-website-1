@@ -39,19 +39,6 @@ export default function OrderInfo() {
   console.log(singleOrder.data.shipmentDetails.address.street);
 
   
-  
-  
-  
-  
-  // const logProductNames = () => {
-  //   orderList?.data?.items?.forEach((order) => {
-  //     order.data.items.forEach((productItem) => {
-  //       console.log(productItem.product.name);
-  //     });
-  //   });
-  // };
-  // logProductNames();
-  
    
     return (
       <Box style={{ marginLeft: "10%", marginTop: "5rem" }}>

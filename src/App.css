@@ -501,7 +501,7 @@ letter-spacing: .5px;
 }
 .LogButton{
   margin-left: 700px;
-  height: 10px;
+  /* height: 10px; */
   border: 1px solid #42a2a2;
   background-color: #42a2a2;
   color: white;

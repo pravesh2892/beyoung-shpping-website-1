@@ -17,6 +17,10 @@ import joggers from "../Assets/joggers-men.jpg";
 import pyjama from "../Assets/payjam-men-1.jpg";
 import shirts from "../Assets/shirts-men-1.jpg";
 import oversized from "../Assets/oversized-men.jpg";
+import kurta from '../Assets/men-kurta.jpg'
+import hoodeis from '../Assets/men-hoodies.jpg'
+import jeans from '../Assets/men-jeans.jpg'
+import trousers from '../Assets/men-trousers.jpg'
 import women1 from "../Assets/printed-tshirt-female.jpg";
 import women2 from "../Assets/female-shorts.jpg";
 import women3 from "../Assets/female-joggers.jpg";
@@ -436,7 +440,7 @@ export default function Home() {
             </UnorderedList>
           </Flex>
           <Box>
-            <NavLink to="/categoris/men">
+            <NavLink to="/categories/men">
               <img src={banner} style={{ width: "99vw", height: "auto" }} />
             </NavLink>
 
@@ -538,18 +542,54 @@ export default function Home() {
                   style={{ width: "100%", marginRight: "10px", marginLeft:"-49px" , borderRadius:"5px" }}
                 />
               </Link>
-              <Link to="/subcategories/men/tshirt">
+            
+            </Flex>
+          
+            <Flex style={{ marginBottom: "20px" }}>
+            <Link to="/subcategories/men/tshirt">
                 <img
                 className="hover-effect"
                   src={oversized}
                   alt="oversized"
                   style={{
-                    width: "100%",
+                    width: "174%",
                     marginRight: "10px",
                     marginTop: "3px",
                     marginLeft:"-28",
                    borderRadius:"5px"
                   }}
+                />
+              </Link>
+              <Link to="/subcategories/men/pyjamas">
+                <img
+                className="hover-effect"
+                  src={kurta}
+                  alt="pyjama"
+                  style={{ width: "82%",  marginLeft:"135px" , borderRadius:"5px" }}
+                />
+              </Link>
+              <Link to="/subcategories/men/pyjamas">
+                <img
+                className="hover-effect"
+                  src={hoodeis}
+                  alt="pyjama"
+                  style={{ width: "79%",  marginLeft:"165px" , borderRadius:"5px" }}
+                />
+              </Link>
+              <Link to="/subcategories/men/pyjamas">
+                <img
+                className="hover-effect"
+                  src={jeans}
+                  alt="pyjama"
+                  style={{ width: "58%",  marginLeft:"178px" , borderRadius:"5px" }}
+                />
+              </Link>
+              <Link to="/subcategories/men/pyjamas">
+                <img
+                className="hover-effect"
+                  src={trousers}
+                  alt="pyjama"
+                  style={{ width: "62%", marginRight: "10px", marginLeft:"79px" , borderRadius:"5px" }}
                 />
               </Link>
             </Flex>

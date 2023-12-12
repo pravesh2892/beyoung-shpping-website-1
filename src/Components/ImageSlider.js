@@ -31,9 +31,9 @@ const responsive = {
   function LargerCarousel() {
     const carouselOptions = {
       responsive: responsive,
-      autoPlay: false,
+      autoPlay: true,
       infinite: true,
-      autoPlaySpeed: 2000,
+      autoPlaySpeed: 3000,
       keyBoardControl: true,
       customTransition: "transform 500ms ease-in-out",
       removeArrowOnDeviceType: ["tablet", "mobile"],

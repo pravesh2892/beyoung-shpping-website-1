@@ -266,7 +266,8 @@ function ProductDetail(){
     {productInfo.name}
     </div> 
     <div style={{height:"25px", display:"flex", width:"55px", marginTop:"8px", fontSize:"18px", border:".3px solid #949494", backgroundColor:"#f7f7f7"}}>
-    <AiFillStar style={{color:"#ffc700", marginRight:"8px", paddingTop:"3px", paddingLeft:"7px"}}/><div>4</div></div>
+    <AiFillStar style={{color:"#ffc700", marginRight:"8px", paddingTop:"3px", paddingLeft:"7px"}}/>
+    <div>4.5</div></div>
     <div style={{marginTop:"8px"}}>₹<span style={{fontSize:"24px", fontWeight:"bold", paddingTop:"10px"}}>{productInfo.price}</span></div>
     <div style={{color:"#737373"}}>inclusive of all taxes</div>
     <br/>

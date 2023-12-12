@@ -11,11 +11,6 @@ import Footer from '../Components/Footer';
 import {GrUserManager,GrUser, GrUserFemale} from 'react-icons/gr';
 import { GiClothes } from "react-icons/gi";
 import { TbMoodKid } from "react-icons/tb";
-import {LiaShoePrintsSolid} from 'react-icons/lia';
-import {BsFillLightningFill, BsCalendar3} from 'react-icons/bs';
-import {MdOutlineCelebration} from 'react-icons/md';
-import { AiOutlineClose } from 'react-icons/ai';
-import {RiMickeyLine} from 'react-icons/ri';
 import { RiCloseLine } from "react-icons/ri";
 import {AiOutlineLeft} from 'react-icons/ai';
 

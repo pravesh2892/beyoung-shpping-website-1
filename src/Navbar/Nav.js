@@ -170,8 +170,6 @@ export default function Nav() {
                   <ListItem style={{marginLeft:"5px", lineHeight:"12px"}}>TRACK YOUR ORDER</ListItem>
                   </Flex>
                 </NavLink>
-                
-  
               </UnorderedList>
             </Flex>
             <Flex>
