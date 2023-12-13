@@ -27,6 +27,9 @@ import women3 from "../Assets/female-joggers.jpg";
 import women4 from "../Assets/jumpsuit.jpg";
 import women5 from "../Assets/pyjama-female.jpg";
 import women6 from "../Assets/oversized-female.jpg";
+import women7 from '../Assets/female-kurti.jpg';
+import women8 from '../Assets/female-jeans.jpg';
+import women9 from '../Assets/female-shirt.jpg'
 import banner from "../Assets/BANNER-DESKTOP-VIEW.jpg";
 import men from "../Assets/men.jpg";
 import women from "../Assets/women.jpg";
@@ -560,7 +563,7 @@ export default function Home() {
                   }}
                 />
               </Link>
-              <Link to="/subcategories/men/pyjamas">
+              <Link to="/subcategories/men/kurta">
                 <img
                 className="hover-effect"
                   src={kurta}
@@ -568,7 +571,7 @@ export default function Home() {
                   style={{ width: "82%",  marginLeft:"135px" , borderRadius:"5px" }}
                 />
               </Link>
-              <Link to="/subcategories/men/pyjamas">
+              <Link to="/subcategories/men/hoodie">
                 <img
                 className="hover-effect"
                   src={hoodeis}
@@ -576,7 +579,7 @@ export default function Home() {
                   style={{ width: "79%",  marginLeft:"165px" , borderRadius:"5px" }}
                 />
               </Link>
-              <Link to="/subcategories/men/pyjamas">
+              <Link to="/subcategories/men/jeans">
                 <img
                 className="hover-effect"
                   src={jeans}
@@ -584,7 +587,7 @@ export default function Home() {
                   style={{ width: "58%",  marginLeft:"178px" , borderRadius:"5px" }}
                 />
               </Link>
-              <Link to="/subcategories/men/pyjamas">
+              <Link to="/subcategories/men/trouser">
                 <img
                 className="hover-effect"
                   src={trousers}
@@ -594,7 +597,7 @@ export default function Home() {
               </Link>
             </Flex>
             <h3 style={headingStyle}>FOR WOMEN</h3>
-            <Flex>
+            <Flex style={{ marginBottom: "20px", marginRight:"90px" }}>
               <Link to="/subcategories/women/tshirt">
                 <img
                 className="hover-effect"
@@ -639,15 +642,42 @@ export default function Home() {
                 className="hover-effect"
                   src={women5}
                   alt="pyjama"
-                  style={{ width: "85%", marginRight: "15px" , marginLeft:"20px", paddingLeft:"60px", borderRadius:"5px"}}
+                  style={{ width: "85%", marginRight: "25px" , marginLeft:"20px", paddingLeft:"60px", borderRadius:"5px"}}
                 />
               </Link>
-              <Link to="/subcategories/women/tshirt">
+              
+            </Flex>
+            <Flex style={{ marginBottom: "20px" }}>
+            <Link to="/subcategories/women/tshirt">
                 <img
                 className="hover-effect"
                   src={women6}
                   alt="oversized"
-                  style={{ width: "63%", marginRight: "15px", paddingLeft:"70px" , borderRadius:"5px"}}
+                  style={{ width: "67%",   borderRadius:"5px"}}
+                />
+              </Link>
+              <Link to="/subcategories/women/kurti">
+                <img
+                className="hover-effect"
+                  src={women7}
+                  alt="oversized"
+                  style={{ width: "61%",  borderRadius:"5px", marginLeft:"-65px"}}
+                />
+              </Link>
+              <Link to="/subcategories/women/jeans">
+                <img
+                className="hover-effect"
+                  src={women8}
+                  alt="oversized"
+                  style={{ width: "65%" , borderRadius:"5px", marginLeft:"-139px"}}
+                />
+              </Link>
+              <Link to="/subcategories/women/shirt">
+                <img
+                className="hover-effect"
+                  src={women9}
+                  alt="oversized"
+                  style={{ width: "70%", marginRight: "15px", borderRadius:"5px", marginLeft:"-217px"}}
                 />
               </Link>
             </Flex>
