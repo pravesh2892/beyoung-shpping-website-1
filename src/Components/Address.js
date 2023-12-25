@@ -110,6 +110,7 @@ const checkEmptyFields = () => {
     addressType:"",
     country:"India",
     })
+    onClose();
 }
   }
 
@@ -246,7 +247,7 @@ const checkEmptyFields = () => {
             )}
 
             <Flex mt={40} ml={50} mb={30}>
-            {/* <span style={{ color: 'red', marginBottom: '10px' }}>{errorMessage}</span> */}
+            
               <Button className='save' type="submit" mr={30} onClick={handleSubmit}>
                 SAVE ADDRESS
               </Button>
@@ -254,7 +255,7 @@ const checkEmptyFields = () => {
               </Flex>
             
               </ModalBody>
-              {/* </form> */}
+             
           </ModalContent>
           </form>
         </Modal>
