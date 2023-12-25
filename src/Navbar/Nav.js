@@ -35,6 +35,7 @@ export default function Nav() {
 
   const isLoggedIn = useSelector((store) => store.user?.isLoggedIn);
   const cartItem = useSelector((state) => state.data.cart);
+  const wishlistItem = useSelector((state)=>state.data.wishlist);
   // console.log(cartItem.results);
 
   const searchInputRef = useRef(null);
@@ -477,6 +478,13 @@ export default function Nav() {
                             marginTop: "12px",
                           }}
                         />
+                          {wishlistItem.results > 0 ? (
+                          <Button className="cartlength">
+                            {wishlistItem.results}
+                          </Button>
+                          ):(
+                            <Button className="cartlength">0</Button>  
+                        )}
                       </ListItem>
                     </NavLink>
                     <NavLink to="/Cart" style={{ color: "black" }}>
@@ -484,11 +492,11 @@ export default function Nav() {
                         <ShoppingCartOutlinedIcon
                           style={{ marginTop: "11px", fontSize: "20px" }}
                         />
-                        {cartItem.results > 0 && (
-                          <Button className="cartlength">
-                            {cartItem.results}
-                          </Button>
-                        )}
+                       {cartItem.results > 0 ? (
+                         <Button className="cartlength">{cartItem.results}</Button>
+                         ) : (
+                         <Button className="cartlength">0</Button>
+                          )}
                       </ListItem>
                     </NavLink>
                   </>

@@ -7,6 +7,7 @@ import {PiShoppingBagLight} from 'react-icons/pi';
 import {BiStar, BiMinus} from 'react-icons/bi';
 import {BsHeart} from 'react-icons/bs';
 import {GrLocation} from 'react-icons/gr';
+import { HiMiniArrowSmallRight } from "react-icons/hi2";
 import {MdAdd} from 'react-icons/md';
 import {RiFileListLine, RiExchangeLine} from 'react-icons/ri';
 import flag from '../Assets/flag.png';
@@ -27,17 +28,13 @@ function ProductDetail(){
     const[number, setNumber] = useState(0);
     const [smallerScreen, setSmallerScreen] = useState(window.innerWidth<1000)
     const [inWishList, setInWishlist] = useState({});
-    const [buttonText, setButtonText] = useState('ADD TO BAG');
+    // const [buttonText, setButtonText] = useState('ADD TO CART');
     const [selectedSize, setSelectedSize] = useState('');
      const navigate = useNavigate();
 
      const handleAddToCart = () => {
-      if (buttonText === 'ADD TO BAG') {
-        setButtonText('GO TO BAG');
         dispatch(addCart(productInfo._id, productInfo.quantity)); 
-      }else{
-      navigate('/cart');
-      }
+     
     };
 
     const dispatch = useDispatch();
@@ -316,38 +313,31 @@ function ProductDetail(){
      {isLoggedIn ? (
     <button className="CART" onClick={handleAddToCart}>
     <PiShoppingBagLight style={{marginRight:"10px", marginTop:"-5px", fontSize:"25px"}}/>
-    {buttonText}</button>
+    ADD TO CART</button>
     ):(
       <NavLink to="/Login" style={{textDecoration:"none"}}>
       <button className="CART">
       <PiShoppingBagLight style={{marginRight:"10px", marginTop:"-5px", fontSize:"25px"}}/>
-      ADD TO BAG</button>
+      ADD TO CART</button>
       </NavLink>
     )}
   
     {isLoggedIn ? (
-      <>
-    {inWishList[productInfo._id] ? (
-     <button className="WISH"  onClick={()=> handleAddToWishList(productInfo._id)}>
-     <AiFillHeart style={{marginRight:"10px", marginTop:"-5px", fontSize:"25px", color:"red"}}/>
-      ADDED TO WISHLIST
+     <NavLink to="/cart" style={{textDecoration:"none"}}>
+     <button className="WISH" >
+     <HiMiniArrowSmallRight  style={{marginRight:"10px", marginTop:"-5px", fontSize:"25px", color:"#000"}}/>
+     BUY NOW
       </button>
+      </NavLink>
     ):(
-    <button className="WISH"  onClick={()=> handleAddToWishList(productInfo._id)}>
-    <BsHeart style={{ height: "20px", width: "20px", color:"grey", marginLeft: "5%", marginRight:"10px" }} 
-    onClick={()=> handleAddToWishList(productInfo._id)}/>WISHLIST
-    </button>
-    )}
-    </>
-    ):(
-      <>
+    
       <Link to ='/Login' style={{textDecoration:"none", color:"black"}}>
-    <button className="WISH"  onClick={()=> handleAddToWishList(productInfo._id)}>
-    <BsHeart style={{ height: "20px", width: "20px", color:"grey", marginLeft: "5%", marginRight:"10px" }} 
-    onClick={()=> handleAddToWishList(productInfo._id)}/>WISHLIST
+    <button className="WISH" >
+    <HiMiniArrowSmallRight  style={{ height: "20px", width: "20px", color:"#000", marginLeft: "5%", marginRight:"10px" }} 
+    /> BUY NOW
     </button>
       </Link>
-      </>
+      
     )}
     </Flex>
 

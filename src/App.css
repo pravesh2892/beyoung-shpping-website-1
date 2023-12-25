@@ -445,8 +445,9 @@ margin-left: 70px;
   cursor: pointer;
   margin-right: 20px;
   height: 40px;
-  background-color:#ffc700 ;
-  border: 2px solid #ffc700;
+  background-color:#51cccc ;
+  border: 2px solid #51cccc;
+  color: #fff;
   border-radius: 3px;
   width: 250px;
   display: flex;
@@ -455,21 +456,33 @@ margin-left: 70px;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  cursor: pointer;
+  transition: transform 0.3s; 
+}
+
+.CART:hover {
+  transform: scale(1.1); 
 }
 
 .WISH{
   height: 40px;
   width: 250px;
-  background-color:WHITE ;
-  border: 1px solid #d6d6d6;
+  background-color:#f9eb28 ;
+  border: 1px solid #f9eb28;
   border-radius: 3px;
-  color: #4f5362;
+  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 15px;
   cursor: pointer;
+  transition: transform 0.3s; 
 }
+
+.WISH:hover {
+  transform: scale(1.1); 
+}
+
 .flag{
   width: 30px;
   height: 30px;
