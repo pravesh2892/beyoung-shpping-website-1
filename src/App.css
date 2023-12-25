@@ -1014,3 +1014,20 @@ margin-left: 90px;
   transform: scale(1.05); 
   
 }
+
+.typingText {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(17, 17, 17);
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em; 
+  animation: typing 3s steps(40, end);
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+}

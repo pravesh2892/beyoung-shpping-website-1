@@ -9,7 +9,7 @@ import {
   List,
   Button,
 } from "@chakra-ui/react";
-import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { NavLink, useNavigate } from "react-router-dom";
 import { BsHeart, BsBag } from "react-icons/bs";
@@ -20,7 +20,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { LOGOUT } from "../Utils/Action";
 import ResNav from "./ResNav";
 import { searchOrder } from "../Utils/ServiceApi";
-
 
 export default function Nav() {
   const [menuHover, setMenuHover] = useState(false);
@@ -138,6 +137,7 @@ export default function Nav() {
     width: "100vw",
   };
 
+  
   return (
     <>
       {smallerScreen ? (
@@ -160,32 +160,55 @@ export default function Nav() {
           </div>
           <Flex className="topBar" style={{ justifyContent: "space-between" }}>
             <Flex>
-              <UnorderedList className="topBar-left">
-              <NavLink
-                  to="Orders"
-                  style={{ textDecoration: "none", color: "white", }}
-                >
-                <Flex>
-                  <LocationOnOutlinedIcon style={{ marginTop: '-7px' }}/>
-                  <ListItem style={{marginLeft:"5px", lineHeight:"12px"}}>TRACK YOUR ORDER</ListItem>
-                  </Flex>
-                </NavLink>
-              </UnorderedList>
+             
+                <UnorderedList className="topBar-left">
+                {isLoggedIn ? (
+                  <>
+                  <NavLink
+                    to="/NotAvailable"
+                    style={{ textDecoration: "none", color: "white" }}
+                  >
+                    <Flex>
+                      <LocationOnOutlinedIcon style={{ marginTop: "-7px" }} />
+                      <ListItem
+                        style={{ marginLeft: "5px", lineHeight: "12px" }}
+                      >
+                        TRACK YOUR ORDER
+                      </ListItem>
+                    </Flex>
+                  </NavLink>
+                </>
+                ):(
+                  <NavLink
+                   to="/Login"
+                    style={{ textDecoration: "none", color: "white" }}
+                  >
+                    <Flex>
+                      <LocationOnOutlinedIcon style={{ marginTop: "-7px" }} />
+                      <ListItem
+                        style={{ marginLeft: "5px", lineHeight: "12px" }}
+                      >
+                        TRACK YOUR ORDER
+                      </ListItem>
+                    </Flex>
+                  </NavLink>
+                )}
+                </UnorderedList>
             </Flex>
             <Flex>
               <UnorderedList className="topBar-right">
-              {isLoggedIn ? (
+                {isLoggedIn ? (
                   <div>
                     <CiUser
                       onClick={handleProfileClick}
                       style={{
                         fontSize: "25px",
-                        color:"white",
+                        color: "white",
                         marginRight: "75px",
                         borderRight: "2px solid white",
                         paddingRight: "10px",
-                        marginTop:"-6px",
-                        strokeWidth: "1"
+                        marginTop: "-6px",
+                        strokeWidth: "1",
                       }}
                     />
                     {dropmenu && (
@@ -250,10 +273,10 @@ export default function Nav() {
                     >
                       <ListItem
                         style={{
-                          marginRight:"55px",
-                          color:"white",
-                          fontSize:"12px",
-                          fontWeight:"500",
+                          marginRight: "55px",
+                          color: "white",
+                          fontSize: "12px",
+                          fontWeight: "500",
                           cursor: "pointer",
                           borderRight: "1px solid white",
                           paddingRight: "10px",
@@ -264,14 +287,18 @@ export default function Nav() {
                     </NavLink>
                   </>
                 )}
-               
-          
-        
               </UnorderedList>
             </Flex>
           </Flex>
 
-          <Flex className="navBar" style={{ justifyContent: "space-between", marginLeft:"35px", marginRight:"45px" }}>
+          <Flex
+            className="navBar"
+            style={{
+              justifyContent: "space-between",
+              marginLeft: "35px",
+              marginRight: "45px",
+            }}
+          >
             <Flex
               style={{
                 overflow: "hidden",
@@ -438,7 +465,7 @@ export default function Nav() {
                       </Box>
                     )}
                 </Box>
-              
+
                 {isLoggedIn ? (
                   <>
                     <NavLink to="/Wishlist" style={{ color: "black" }}>

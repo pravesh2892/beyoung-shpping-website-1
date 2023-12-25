@@ -78,7 +78,7 @@ const responsive = {
           <div className='swiper-slide-carousel'>
           <Link to="/subcategories/men/jogger">
             <img style={{width:"370px"}} src={joggers} alt="joggers" />
-            <span>Pants</span>
+            <span>jogger</span>
             </Link>
           </div>
         </Carousel>
@@ -111,7 +111,7 @@ const responsive = {
           <div className='swiper-slide-carousel'>
           <Link to="/subcategories/men/jogger">
             <img className="large-slider-img" src={joggers} alt="joggers" />
-            <span>Pants</span>
+            <span>jogger</span>
            
             </Link>
           </div>

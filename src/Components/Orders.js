@@ -26,27 +26,27 @@ export default function Orders(){
     }
   };
   fetchData();
-  // const list = localStorage.getItem("orderHistory");
-  // if(list){
-  // setOrderList(JSON.parse(list));
-  // }
+  const list = localStorage.getItem("orderHistory");
+  if(list){
+  setOrderList(JSON.parse(list));
+  }
 },[])
  
-console.log(orderList);
+console.log("order list data",orderList);
 console.log(orderList?.data);
 
 
 
 
 
-// const logProductNames = () => {
-//   orderList?.data?.items?.forEach((order) => {
-//     order.data.items.forEach((productItem) => {
-//       console.log(productItem.product.name);
-//     });
-//   });
-// };
-// logProductNames();
+const logProductNames = () => {
+  orderList?.data?.items?.forEach((order) => {
+    order.data.items.forEach((productItem) => {
+      console.log(productItem.product.name);
+    });
+  });
+};
+logProductNames();
 
  
   return (

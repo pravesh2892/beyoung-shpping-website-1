@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import notfound from "../Assets/not.gif";
 import { Button, Flex } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 export default function NotAvailable() {
+  const [text, setText] = useState("");
+
+  useEffect(() => {
+    const animateText = (word, index) => {
+      setTimeout(() => {
+        setText(word.substring(0, index + 1));
+        if (index < word.length - 1) {
+          animateText(word, index + 1);
+        }
+      }, 100); 
+    };
+
+    const word = "Comming soon...";
+    animateText(word, 0);
+  }, []);
+
   return (
     <div style={{ marginTop: "5rem" }}>
       <Flex
@@ -14,6 +30,7 @@ export default function NotAvailable() {
         }}
       >
          <img src={notfound} style={{width:"40%"}}  />
+         <div className="typingText">{text}</div>
         <h3>We are working on something amazing.</h3>
         <h4 style={{ marginTop: "-15px" }}>Till then stay tuned</h4>
         <Link to="/">

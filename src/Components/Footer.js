@@ -220,7 +220,7 @@ export default function Footer() {
                     <div>Contact Us</div>
                   </NavLink>
                   <NavLink
-                    to="Orders"
+                    to="/NotAvailable"
                     style={{ textDecoration: "none", color: "white",  }}
                   >
                     <div>Track Order</div>
