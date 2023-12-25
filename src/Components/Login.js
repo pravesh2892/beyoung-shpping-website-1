@@ -54,7 +54,7 @@ const handlelogin = (e) => {
     <h1 className='login'>Log in / Sign up</h1>
     <h5 className='tag'>Get Exciting Offers & Track Order</h5>
     
-    <Text className="error" style={{color: color, marginLeft:"700px"}}>
+    <Text className="error" style={{color: "red", marginLeft:"730px"}}>
     {message} </Text>
 
     <input placeholder='Enter Email ID' type='text' className='enterEmail' value={email} 

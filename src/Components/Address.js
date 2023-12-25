@@ -22,12 +22,25 @@ export default function Address() {
     addressType:"",
     country:"India",
   });
-  const navigate = useNavigate();
+
+  const [formErrors, setFormErrors] = useState({
+    name: false,
+    mobile: false,
+    pinCode: false,
+    city: false,
+    state: false,
+    street: false,
+    landmark: false,
+    locality: false,
+
+  });
+  
   const dispatch = useDispatch();
+  const [errorMessage, setErrorMessage] = useState('');
   const[selectedAddress, setSelectedAddress] = useState(0);
   const { isOpen, onOpen, onClose } = useDisclosure(); 
   const [addCount, setAddCount] = useState(()=>{
-    const savedData = localStorage.getItem("userDetailsList");
+  const savedData = localStorage.getItem("userDetailsList");
     return savedData ? JSON.parse(savedData).length :0;
   });
 
@@ -45,9 +58,22 @@ export default function Address() {
 
 const items = cart?.data?.items;
 
-  // const handleEdit = (index) => {
-  //   setFormData(userDetailsList[index]);
-  // };
+const checkEmptyFields = () => {
+  const errors = {
+    name: formData.name.trim() === '',
+    mobile: formData.mobile.trim() === '',
+    pinCode: formData.pinCode.trim()==='',
+    city: formData.city.trim()==='',
+    state: formData.state.trim()==='',
+    street: formData.street.trim()==='',
+    landmark: formData.landmark.trim()==='',
+    locality: formData.locality.trim()==='',
+  };
+
+  setFormErrors(errors);
+  return Object.values(errors).some((error) => error);
+};
+
 
   const handleRemove = (index) => {
     const updatedList = [...userDetailsList];
@@ -63,6 +89,12 @@ const items = cart?.data?.items;
 
   const handleSubmit=async(e)=>{
     e.preventDefault();
+    const hasEmptyFields = checkEmptyFields();
+
+    if (hasEmptyFields) {
+      setErrorMessage('all fields are required.');
+    } else {
+      setErrorMessage('');
     console.log(formData);
     setAddCount((prev) => prev + 1);
     setUserDetailsList([...userDetailsList, formData]);
@@ -79,6 +111,7 @@ const items = cart?.data?.items;
     country:"India",
     })
 }
+  }
 
   useEffect(() => {
     localStorage.setItem("userDetailsList", JSON.stringify(userDetailsList)); 
@@ -110,7 +143,7 @@ const items = cart?.data?.items;
   checked={selectedAddress === index}
   onChange={() => setSelectedAddress(index)}/>
   <h3 style={{marginLeft:"60px", marginTop:"-25px"}}>{formData.name}</h3>
-  <Button style={{marginLeft:"80%", marginTop:"-80px", color:" rgba(0, 0, 0, 0.3)", border:"none", borderRadius:"5px"}}>
+  <Button style={{marginLeft:"52%", marginTop:"-80px", color:" rgba(0, 0, 0, 0.3)", border:"none", borderRadius:"5px"}}>
   {formData.addressType}</Button>
 
   <Text style={{marginTop:"-25px", fontSize:"13px", marginLeft:"20px"}}>
@@ -154,7 +187,7 @@ const items = cart?.data?.items;
             <ModalHeader style={{display:"flex", marginBottom:"12%", marginLeft:"10px", fontWeight:"bold"}}>Add New Address
             <ModalCloseButton style={{width:"10px", marginLeft:"75%", backgroundColor:"white", border:"none"}} />
             </ModalHeader>
-            <ModalBody pb={6} ml={20} overflowY="auto" >
+            <ModalBody pb={6} ml={20} mt={17} overflowY="auto" >
               <FormControl style={{position:"relative"}}>
                 <FormLabel className='label'>Country</FormLabel>
                 <Input placeholder='INDIA (in capital)' className='input' name="country" required onChange={handleChange} value={formData.country} />
@@ -208,9 +241,12 @@ const items = cart?.data?.items;
             <Input placeholder='Address Type (Home, Office or Others)' required value={formData.addressType} onChange={handleChange} type='text' name="addressType"
             style={{lineHeight:"8ex", width:"520px", left:"2em", borderRadius:"6px", border:"1px solid gray", paddingLeft: "20px"}}/>
             </FormControl>
-         
+            {errorMessage && (
+              <span style={{ color: 'red', marginBottom: '10px', textAlign: 'center', marginLeft:"170px" }}>{errorMessage}</span>
+            )}
 
             <Flex mt={40} ml={50} mb={30}>
+            {/* <span style={{ color: 'red', marginBottom: '10px' }}>{errorMessage}</span> */}
               <Button className='save' type="submit" mr={30} onClick={handleSubmit}>
                 SAVE ADDRESS
               </Button>

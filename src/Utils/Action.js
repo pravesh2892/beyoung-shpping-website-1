@@ -56,7 +56,7 @@ export const login = (email, password)=>{
     if(loginDetail){
         dispatch(LOGIN_SUCCESS(loginDetail));
     }else{
-        dispatch(LOGIN_FAILURE("Invalid User"));
+        dispatch(LOGIN_FAILURE("Invalid username or password. Please try again"));
         }   
     }
 }

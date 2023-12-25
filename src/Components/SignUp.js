@@ -54,7 +54,7 @@ import {useNavigate} from 'react-router-dom';
     <h1 className='login'>Sign Up</h1>
     <h5 className='tag'>Get Exciting Offers & Track Order !</h5>
     
-    <Text className="error" style={{color: color, marginLeft:"850px"}}>
+    <Text className="error" style={{color: "red", marginLeft:"850px"}}>
     {message} </Text>
 
     <input placeholder='Enter Username' type='text' className='enterEmail'
