@@ -110,7 +110,7 @@ const checkEmptyFields = () => {
     addressType:"",
     country:"India",
     })
-    onClose();
+   
 }
   }
 
