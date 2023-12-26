@@ -10,7 +10,7 @@ export default function Account(){
         <hr className='ruler' style={{marginLeft:"10px", marginTop:"-10px"}}/>
     <Flex style={{marginTop:"7rem"}}>
     <Box>
-    <NavLink to="/Orders" style={{textDecoration:"none", color:"black"}}>
+    <NavLink  to="/NotAvailable" style={{textDecoration:"none", color:"black"}}>
         <Flex>
         <Text style={{fontSize:"20px"}}>My Orders</Text>
         <MdArrowForwardIos style={{color:"grey", marginLeft:"10px", marginTop:"26px"}}/>

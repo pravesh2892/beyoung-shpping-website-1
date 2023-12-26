@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { BiSearch } from "react-icons/bi";
+import { IoIosArrowForward } from "react-icons/io";
 import {
   Flex,
   UnorderedList,
@@ -200,38 +201,34 @@ export default function Nav() {
               <UnorderedList className="topBar-right">
                 {isLoggedIn ? (
                   <div>
-                    <CiUser
+                    <div
                       onClick={handleProfileClick}
                       style={{
-                        fontSize: "25px",
+                        fontSize: "12px",
                         color: "white",
-                        marginRight: "75px",
+                        marginRight: "131px",
                         borderRight: "2px solid white",
                         paddingRight: "10px",
-                        marginTop: "-6px",
+                        marginTop: "-3px",
                         strokeWidth: "1",
+                        cursor:"pointer",
                       }}
-                    />
+                      >
+                      MY ACCOUNT
+                    </div>
                     {dropmenu && (
                       <ul className="profileOption">
                         <li
                           style={{
-                            backgroundColor: "#eee",
-                            color: "black",
+                            backgroundColor: "#fff",
+                            color: "#000",
+                            fontWeight:"600",
+                            fontSize:"13px"
                           }}
                         >
-                          Hello, {userInfo?.signup?.data?.name}
+                          Hello {userInfo?.signup?.data?.name}
                         </li>
-                        <NavLink
-                          to="/Account"
-                          style={{
-                            textDecoration: "none",
-                            cursor: "pointer",
-                            color: "black",
-                          }}
-                        >
-                          <li>My Account</li>
-                        </NavLink>
+                        <hr style={{marginLeft:"13px", marginRight:"27px"}}/>
                         <NavLink
                           to="/Wishlist"
                           style={{
@@ -240,17 +237,36 @@ export default function Nav() {
                             color: "black",
                           }}
                         >
+                        <Flex className="drop-option">
                           <li>My Wishlist</li>
+                          <IoIosArrowForward style={{marginRight:"50px", fontSize:"24px", marginTop:"7px"}}/>
+                          </Flex>
                         </NavLink>
                         <NavLink
-                          to="/Orders"
+                          to="/Profile"
                           style={{
                             textDecoration: "none",
                             cursor: "pointer",
                             color: "black",
                           }}
                         >
-                          <li>My Orders</li>
+                       <Flex className="drop-option">
+                          <li>My Profile</li>
+                          <IoIosArrowForward style={{marginRight:"50px", fontSize:"24px", marginTop:"7px"}}/>
+                          </Flex>
+                        </NavLink>
+                        <NavLink
+                          to="/NotAvailable"
+                          style={{
+                            textDecoration: "none",
+                            cursor: "pointer",
+                            color: "black",
+                          }}
+                        >
+                          <Flex className="drop-option">
+                          <li>My Order</li>
+                          <IoIosArrowForward style={{marginRight:"50px", fontSize:"24px", marginTop:"7px"}}/>
+                          </Flex>
                         </NavLink>
                         <NavLink
                           to="/Wallet"
@@ -260,11 +276,15 @@ export default function Nav() {
                             color: "black",
                           }}
                         >
+                           <Flex className="drop-option">
                           <li>My Wallet</li>
+                          <IoIosArrowForward style={{marginRight:"50px", fontSize:"24px", marginTop:"7px"}}/>
+                          </Flex>
                         </NavLink>
-                        <li onClick={handleLogout}>Logout</li>
                       </ul>
                     )}
+
+                    <div className="logout-btn" onClick={handleLogout}>LOGOUT</div>
                   </div>
                 ) : (
                   <>
@@ -274,7 +294,7 @@ export default function Nav() {
                     >
                       <ListItem
                         style={{
-                          marginRight: "55px",
+                          marginRight: "9px",
                           color: "white",
                           fontSize: "12px",
                           fontWeight: "500",
@@ -284,6 +304,23 @@ export default function Nav() {
                         }}
                       >
                         LOGIN
+                      </ListItem>
+                    </NavLink>
+                    <NavLink
+                      to="/SignUp"
+                      style={{ color: "white", textDecoration: "none" }}
+                    >
+                      <ListItem
+                        style={{
+                          marginRight: "55px",
+                          color: "white",
+                          fontSize: "12px",
+                          fontWeight: "500",
+                          cursor: "pointer",
+                          paddingRight: "10px",
+                        }}
+                      >
+                        SINGUP
                       </ListItem>
                     </NavLink>
                   </>

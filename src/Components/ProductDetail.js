@@ -5,7 +5,6 @@ import { NavLink, useParams, useNavigate, Link } from 'react-router-dom';
 import {AiFillStar, AiFillHeart} from 'react-icons/ai';
 import {PiShoppingBagLight} from 'react-icons/pi';
 import {BiStar, BiMinus} from 'react-icons/bi';
-import {BsHeart} from 'react-icons/bs';
 import {GrLocation} from 'react-icons/gr';
 import { HiMiniArrowSmallRight } from "react-icons/hi2";
 import {MdAdd} from 'react-icons/md';
@@ -27,15 +26,11 @@ function ProductDetail(){
     const[productInfo, setProductInfo] = useState([]);
     const[number, setNumber] = useState(0);
     const [smallerScreen, setSmallerScreen] = useState(window.innerWidth<1000)
-    const [inWishList, setInWishlist] = useState({});
-    // const [buttonText, setButtonText] = useState('ADD TO CART');
     const [selectedSize, setSelectedSize] = useState('');
-     const navigate = useNavigate();
+  
 
-     const handleAddToCart = () => {
-        dispatch(addCart(productInfo._id, productInfo.quantity)); 
-     
-    };
+    
+    
 
     const dispatch = useDispatch();
     const cartItem = useSelector((state)=>state.data.cart);
@@ -45,26 +40,14 @@ function ProductDetail(){
     const productSize = ['S','XL', 'L', 'M', 'XXL']; 
     const availableSizes = productInfo.size || [];
     //console.log(cartItem);
-     
-    const handleAddToWishList =(productId)=>{
-      // console.log("handlewishlist being called", productId)
-     if(isLoggedIn){
-      if(inWishList[productId]){
-        dispatch(removeWishlist(productId));
-        setInWishlist((prevState)=>({
-          ...prevState,
-          [productId]: false,
-        }));
-      }else{
-        dispatch(addWishlist(productId));
-        setInWishlist((prevState)=>({
-          ...prevState,
-          [productId]: true,
-        }));
-           }
-        }
-    }
+
+    const handleAddToCart = () => {
+      dispatch(addCart(productInfo._id, productInfo.quantity)); 
+   
+  };
     
+
+   
     
     useEffect(() => {
     const fetchData = async () => {
@@ -324,7 +307,7 @@ function ProductDetail(){
   
     {isLoggedIn ? (
      <NavLink to="/cart" style={{textDecoration:"none"}}>
-     <button className="WISH" >
+     <button className="WISH"  onClick={handleAddToCart} >
      <HiMiniArrowSmallRight  style={{marginRight:"10px", marginTop:"-5px", fontSize:"25px", color:"#000"}}/>
      BUY NOW
       </button>
