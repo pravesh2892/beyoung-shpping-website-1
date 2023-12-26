@@ -699,7 +699,7 @@ background-color: rgb(252, 255, 238);
 .totalButton{
   margin-left: 8rem;
   border: none;
-  background-color: #42a2a2;
+  background-color: #51cbcc;
   color: white;
   border-radius: 5px;
   width: 16rem;
@@ -1053,4 +1053,157 @@ margin-left: 90px;
   color: white;
   margin-left: 102px ;
   margin-top: -13px;
+}
+
+.cards-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0 0;
+  padding-bottom: 50px;
+}
+
+.checkoutsteps {
+  width: 90%;
+    margin: 22px 0px 23px 49px;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.1);
+}
+.shopping-step {
+  width: 60%;
+  display: flex;
+  margin: 0px auto;
+  position: relative;
+  background: white;
+  border-radius: 3px;
+  padding: 10px 15px;
+  justify-content: space-between;
+}
+.shopping-step li {
+  text-align: center;
+  font-size: 12px;
+  z-index: 2;
+}
+.shopping-step .checkouttopicon {
+  background: #fff;
+  margin: 0 auto;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 36px;
+  border: 1px solid #000;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+}
+.shopping-step li.shopping-cart-icon.active .checkouttopicon i {
+  background: url(https://www.beyoung.in/mobile/images/home/new/Cart.png) no-repeat;
+  display: block ;
+  padding: 8px;
+  width: 19px ;
+  background-repeat: round ;
+  height: 19px ;
+  margin-top: 0px;
+}
+span.checkouttxt {
+  color: #000;
+  text-align: center;
+  font-size: 11px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: block;
+  margin-top: 5px;
+}
+li.address span.checkouttopicon {
+  border: 1px solid #000 ;
+}
+.shopping-step .address i {
+  background: url(https://www.beyoung.in/mobile/images/home/new/Location-Outline.png);
+  display: block;
+  padding: 8px;
+  width: 19px;
+  background-repeat: round;
+  height: 19px;
+  margin-top: 0px;
+}
+
+span.checkouttxt {
+  color: #000;
+  text-align: center;
+  font-size: 11px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: block;
+  margin-top: 5px;
+}
+li.address span.checkouttopicon {
+  border: 1px solid #000 ;
+}
+
+li.address span.checkouttxt {
+  color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-size: 11px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.shopping-step .credit-card i {
+  background: url(https://www.beyoung.in/mobile/images/home/new/Payment-outline.png);
+  display: block;
+  padding: 8px;
+  width: 16px;
+  background-repeat: round;
+  height: 16px;
+  margin-top: 0px;
+}
+li.credit-card span.checkouttxt {
+  color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-size: 11px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+li.address span.checkouttxt {
+  color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-size: 11px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.shopping-step {
+  width: 60%;
+  display: flex;
+  margin: 0px auto;
+  position: relative;
+  background: white;
+  border-radius: 3px;
+  padding: 10px 15px;
+  justify-content: space-between;
+}
+
+.shopping-step li {
+  display: inline-block; 
+  position: relative; 
+}
+
+.shopping-step li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 38%; 
+ margin-left: 23px;
+  height: 1px; 
+  width: 790%; 
+  background-color: #000; 
 }

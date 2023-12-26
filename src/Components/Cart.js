@@ -84,11 +84,17 @@ import Footer from './Footer';
           {Array.isArray(cart?.data?.items) && cart?.data?.items.length > 0 ? (
             <div>
               <Flex>
-                <div className="cartInfo">
-                  <FaTruck style={{ color: 'red', marginRight: '20px' }} />
-                  Yay! You get FREE delivery on this order
-                </div>
-                <Box className="cartDiscount">Save extra <span style={{ fontWeight: 'bold' }}>₹ 70</span> with <span style={{ fontWeight: 'bold' }}>TriBe</span></Box>
+              
+                <div class="checkoutsteps">
+                <ul class="shopping-step">
+                <li class="shopping-cart-icon active">
+                <span class="checkouttopicon"> <i> </i></span>
+                <span class="checkouttxt">My Cart</span></li>
+            
+                <li class="address"><span class="checkouttopicon"><i> </i></span>
+                <span class="checkouttxt">Address</span></li>
+                <li class="credit-card"><span class="checkouttopicon"><i> </i></span>
+                <span class="checkouttxt">Payment</span></li></ul></div>
               </Flex>
               <Flex>
                 <Container style={{ width: '50%', height: 'fit-content', marginLeft: '30px', marginTop: '20px' }}>
@@ -151,7 +157,9 @@ import Footer from './Footer';
                   </Flex>
                   <Flex>
                   <div className='priceTag'>Shipping Charges</div>
-                  <div style={{ color:"#42a2a2", marginLeft:"14.5rem", marginTop:"20px"}}>FREE</div>
+                  <div style={{ color:" rgb(9, 181, 9)", marginLeft:"13rem", marginTop:"20px"}}>
+                  <span style={{textDecoration:"line-through", color:"rgb(0, 0, 0)"}}>₹49 </span>
+                   Free</div>
                 </Flex>
                 <Flex>
                 <Box className='priceTag' style={{fontWeight:"bold"}}>SubTotal</Box>
@@ -172,6 +180,16 @@ import Footer from './Footer';
                 </Container>
                
               </Flex>
+              <div class="cards-images">
+              <img src="https://www.beyoung.in/desktop/images/home/lock.png" alt=""/>
+              <img src="https://www.beyoung.in/desktop/images/home/paytm.png" alt=""/>
+              <img src="https://www.beyoung.in/desktop/images/home/visa.png" alt=""/>
+              <img src="https://www.beyoung.in/desktop/images/home/card.png" alt=""/>
+              <img src="https://www.beyoung.in/desktop/images/home/upi.png" alt=""/>
+              <img src="https://www.beyoung.in/desktop/images/home/maestro.png" alt=""/>
+              <img src="https://www.beyoung.in/desktop/images/home/rupay.png" alt=""/>
+              <img src="https://www.beyoung.in/desktop/images/home/net.png" alt=""/>
+              </div>
             </div>
           ) : (
             <Flex style={{flexDirection:"column", justifyContent:"center",alignItems:"center"}}>
