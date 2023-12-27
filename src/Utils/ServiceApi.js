@@ -286,6 +286,7 @@ export async function placeOrder(productId, address, quantity){
             method: "POST",
             headers: {
             Accept: "application/json",
+            "Content-Type": "application/json",
             Authorization: `Bearer ${parsedData.signup.token}`,
             projectId: "3ggih9l8ac0f",
         },
@@ -303,9 +304,7 @@ export async function placeOrder(productId, address, quantity){
                 },
         }),
       });
-      console.log("Response Status:", response.status);
-      const responseData = await response.json();
-      console.log("Response Data:", responseData);
+      const data = await response.json();
       console.log("data be placed", data);
       return data.status;
       }
@@ -314,7 +313,6 @@ export async function placeOrder(productId, address, quantity){
     }
   }
 }
-
 
 export async function getOrderList() {
     const user = localStorage.getItem("signup");
